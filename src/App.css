@@ -8,7 +8,9 @@
   pointer-events: none;
 }
  * {
-  height: 100vh
+  height: 100vh;
+  font-size: 62.5%;
+  box-sizing: border-box;
  }
 .App-header {
   background-color: #282c34;
