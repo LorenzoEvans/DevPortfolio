@@ -7,6 +7,7 @@ class Landing extends React.Component {
       <div className="overlay">
       <div className="background">
        <span className="title" >La Maison De Lorenzo</span>
+       <span className="title2" >La Maison De Lorenzo</span>
       </div>
      </div>
     );
