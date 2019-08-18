@@ -19,22 +19,30 @@
 
 .title {
  opacity: 1;
- font-size: 90px;
+ color: #503a3a;
+ font-size: 40px;
  font-style: bold;
+ /* border: 3px solid white ; */
+ width: 100%;
+ text-align: center;
+ font-weight: 700;
+ letter-spacing: 3px ;
  font-family: 'Bungee Shade';
- text-shadow: 5px 0px 3px #74b5be;
+ text-shadow: 0px 23px #74b5be;
 }
 
 .title2 {
  position: absolute;
  left: 0px;
  opacity: 0.88;
- height: 100vh;
- top: 10px ;
+ height: 50vh;
+ top: 42px ;
+ width: 100% ;
+ text-align: center;
  color:  #4d4d4d;
- font-size: 90px;
+ font-size: 40px;
  font-style: bold;
- font-weight: 500;
+ letter-spacing: 3px ;
  font-family: 'Bungee Shade';
- text-shadow: 4px 20px #8eabbe;
+ text-shadow: 0px 25px #8eabbe;
 } 
