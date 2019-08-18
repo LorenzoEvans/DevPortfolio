@@ -2,7 +2,7 @@
 .background {
  height: 100vh;
 
- background: linear-gradient(300deg, #dedede, #4d4d4d, #463982, #000000, #000000, #74b5be, #cbaaed);
+ background: repeating-linear-gradient(330deg, #6F7983, #4d4d4d, #463982, #707479, rgb(51, 40, 68), #74b5be, #76638a);
  background-size: 1400% 1400%;
  
  animation: AnimationName 10s ease infinite;
