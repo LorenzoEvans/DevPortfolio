@@ -30,7 +30,7 @@
  font-weight: 700;
  letter-spacing: 3px ;
  font-family: 'Bungee Shade';
- text-shadow: 0px 46px #74b5be;
+ text-shadow: 0px 44px #74b5be;
 }
 
 .title2 {
@@ -48,7 +48,7 @@
  font-style: bold;
  letter-spacing: 3px ;
  font-family: 'Bungee Shade';
- text-shadow: 0px 54px #8eabbe;
+ text-shadow: 0px 44px #8eabbe;
 } 
 
 .button-div {
@@ -69,15 +69,14 @@
  width: 100% ;
  text-align: center;
  font-size: 4rem;
- border-style: groove;
+ border: none ;
  opacity: 0.7;
  border-block-color: #6f6f6f;
- color: hsl(270, 60%, 50%, .15);
- text-shadow: 0px 14px #2e3438;
+ color: rgba(254, 255, 251, 0.548);
  background: none ;
  font-family: 'Bungee Shade';
- margin-bottom: 170px ;
-box-shadow: 10px 10px 10px 10px #6F7983, rgb(149, 202, 255);
+ margin-bottom: 154px ;
+box-shadow: 50px 50px 50px 50px #6F7983, rgb(149, 202, 255);
 }
 .enter-button:hover {
  background: repeating-linear-gradient(240deg, #6F7983,  #0c1f36, #4d4d4d, #0d0a18, #707479,  #637181, rgb(51, 40, 68), #74b5be, #76638a);
