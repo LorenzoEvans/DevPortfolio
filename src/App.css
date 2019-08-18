@@ -109,21 +109,24 @@ html {
 .enter-button {
  height: 7rem ;
  z-index: 4;;
- width: 100% ;
+ width: 20% ;
  text-align: center;
- border: none ;
- opacity: 0.7;
- border-block-color: #6f6f6f;
- color: rgba(254, 255, 251, 0.548);
+ opacity: 0.9;
+ /* border: outset 2px solid #4d4d4d1a ; */
+ font-size: 3rem ;
+ color: rgba(230, 230, 230, 0.678);
  background: none ;
+ border: none ;
+ border-radius: 10px 50px 10px 50px;
  font-family: 'Bungee Shade';
  margin-bottom: 154px ;
-box-shadow: 50px 50px 50px 50px #6F7983, rgb(149, 202, 255, 0.3);
+ box-shadow: 0px 0px 0px 8px rgba(83, 76, 114, 0.521);
 }
 .enter-button:hover {
- box-shadow:  rgba(161, 161, 161, 0.452), 3px 17px 10px 5px rgba(122, 110, 110, 0.486);
- background: repeating-linear-gradient(240deg, #6F7983,  #0c1f36, #4d4d4d, #0d0a18, #707479,  #637181, rgb(51, 40, 68), #a9aaaa, #544a5f);
-  background-size: 600% 600%;
+ /* box-shadow:  rgba(3, 3, 3, 0.452), 3px 17px 10px 5px rgba(122, 110, 110, 0.486); */
+ background: repeating-linear-gradient(-330deg, #6F7983,  #0c1f36, #4d4d4d, #0d0a18, #707479,  #637181, rgb(51, 40, 68), #a9aaaa, #544a5f);
+  background-size: 1400% 1400%;
   animation: AnimationName 20s ease-in-out infinite;
 }
 
+.enter-button:focus {outline:0;}
