@@ -4,9 +4,9 @@ class Landing extends React.Component {
 
   render() {
     return (
+      <div className="overlay">
       <div className="background">
-     <div className="overlay">
-       
+       <span className="title" >La Maison De Lorenzo</span>
       </div>
      </div>
     );
