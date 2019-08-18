@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
-import { Alert } from 'shards-react'
-class Landing extends Component {
+import React from 'react';
+import './Landing.css'
+class Landing extends React.Component {
 
   render() {
     return (
-      <div>
-        
+      <div className="background">
+        hi
       </div>
     );
   }

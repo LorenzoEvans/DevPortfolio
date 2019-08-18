@@ -1,0 +1,16 @@
+
+.background {
+ height: 100vh;
+
+ background: linear-gradient(300deg, #dedede, #4d4d4d, #463982, #000000, #000000, #74b5be, #cbaaed);
+ background-size: 1400% 1400%;
+ 
+ animation: AnimationName 10s ease infinite;
+ 
+}
+  @keyframes AnimationName {
+      0%{background-position:0% 50%}
+      25%{background-position: 25% 75%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
