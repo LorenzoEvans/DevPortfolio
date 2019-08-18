@@ -3,6 +3,7 @@
  background-size: 1400% 1400%;
  animation: AnimationName 20s ease-in-out infinite;
  z-index: 0;
+ font-size: 62.5%;
 }
 
 @keyframes AnimationName {
@@ -20,11 +21,11 @@
 .title {
  opacity: 1;
  color: #503a3a;
- font-size: 40px;
  display: flex;
  justify-content: center;
  align-items: center;
  font-style: bold;
+ font-size: 3rem ;
  /* border: 3px solid white ; */
  width: 100%;
  font-weight: 700;
@@ -42,9 +43,9 @@
  justify-content: center;
  align-items: center;
  top: 34px ;
+ font-size: 3rem ;
  width: 100% ;
  color:  #d6b3e4;
- font-size: 40px;
  font-style: bold;
  letter-spacing: 3px ;
  font-family: 'Bungee Shade';
@@ -68,7 +69,6 @@
  z-index: 4;;
  width: 100% ;
  text-align: center;
- font-size: 4rem;
  border: none ;
  opacity: 0.7;
  border-block-color: #6f6f6f;
@@ -79,9 +79,9 @@
 box-shadow: 50px 50px 50px 50px #6F7983, rgb(149, 202, 255, 0.3);
 }
 .enter-button:hover {
- box-shadow: 5px 12px 16px 5px rgba(173, 120, 209, 0.452), 3px 17px 50px 3px rgba(122, 110, 110, 0.486);
+ box-shadow:  rgba(161, 161, 161, 0.452), 3px 17px 10px 5px rgba(122, 110, 110, 0.486);
  background: repeating-linear-gradient(240deg, #6F7983,  #0c1f36, #4d4d4d, #0d0a18, #707479,  #637181, rgb(51, 40, 68), #a9aaaa, #544a5f);
-  background-size: 1400% 1400%;
+  background-size: 600% 600%;
   animation: AnimationName 20s ease-in-out infinite;
 }
 

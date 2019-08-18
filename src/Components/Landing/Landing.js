@@ -6,7 +6,7 @@ const EnterButton = () => {
 
  return (
   <div  className="button-div">
-   <button className="enter-button" outline pill theme="secondary">
+   <button className="enter-button">
     Enter
    </button>
   </div>
