@@ -6,9 +6,9 @@ const EnterButton = () => {
 
  return (
   <div  className="button-div">
-   <Button className="enter-button" outline pill theme="secondary">
+   <button className="enter-button" outline pill theme="secondary">
     Enter
-   </Button>
+   </button>
   </div>
 
  )
