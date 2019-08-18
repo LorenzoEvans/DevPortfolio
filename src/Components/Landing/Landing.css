@@ -1,12 +1,8 @@
 
 .background {
- height: 100vh;
-
  background: repeating-linear-gradient(330deg, #6F7983, #4d4d4d, #463982, #707479, rgb(51, 40, 68), #74b5be, #76638a);
  background-size: 1400% 1400%;
- 
  animation: AnimationName 10s ease infinite;
- 
 }
   @keyframes AnimationName {
       0%{background-position:0% 50%}
@@ -14,3 +10,8 @@
       50%{background-position:100% 50%}
       100%{background-position:0% 50%}
   }
+
+ .overlay {
+  background: rgb(0, 0, 0);
+  opacity: 0.3;
+ }

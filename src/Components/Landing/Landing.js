@@ -4,10 +4,11 @@ class Landing extends React.Component {
 
   render() {
     return (
-     <div></div>
       <div className="background">
-        hi
+     <div className="overlay">
+       
       </div>
+     </div>
     );
   }
 }
