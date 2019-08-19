@@ -14,20 +14,35 @@ class Home extends Component {
  }
  
   render() {
+   const setState = (index) => {this.setState({ selectedIndex: index})}
     return (
-     <Pane display="flex" heigh={240}>
-      <Tablist>
+     <Pane display="flex" style={{border: '3px solid black'}} height={33}>
+      <Tablist marginBottom={16} flexBasis={300} marginRight={0} >
        {this.state.tabs.map((tab, index) => (
-        <SidebarTab>
-          Hi
+        <SidebarTab
+        key={tab}
+        id={tab}
+        style={{border: '2px solid black', color: "black"}}
+        onSelect={() => setState(index) }
+        isSelected={index === this.state.selectedIndex}
+        aria-controls={`panel-${tab}`}
+        >
+          {tab}
         </SidebarTab>
        ))}
       </Tablist>
-      <Pane>
-       {this.Componentstate.tabs.map((tab, index) => (
-        <Pane>
+      <Pane padding={16} flex="1">
+       {this.state.tabs.map((tab, index) => (
+        <Pane
+         key={tab}
+         id={`panel-${tab}`}
+         role="tabpanel"
+         aria-labelledby={tab}
+         aria-hidden={ index !== this.state.selectedIndex }
+         display={index === this.state.selectedIndex ? 'block': 'none'}
+        >
 
-         <Paragraph>Hey</Paragraph>
+         <Paragraph>Panel {tab}</Paragraph>
         </Pane>
        ))}
       </Pane>
