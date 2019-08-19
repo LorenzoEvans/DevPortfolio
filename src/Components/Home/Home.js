@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import { Pane, Tablist, SidebarTab, Paragraph } from 'evergreen-ui';
+
+
+
 class Home extends Component {
  constructor(props) {
    super(props)
@@ -10,12 +14,24 @@ class Home extends Component {
  }
  
   render() {
-   const { state } = this.state 
-   const setState = this.setState
     return (
-      <div>
+     <Pane display="flex" heigh={240}>
+      <Tablist>
+       {this.state.tabs.map((tab, index) => (
+        <SidebarTab>
+          Hi
+        </SidebarTab>
+       ))}
+      </Tablist>
+      <Pane>
+       {this.Componentstate.tabs.map((tab, index) => (
+        <Pane>
 
-      </div>
+         <Paragraph>Hey</Paragraph>
+        </Pane>
+       ))}
+      </Pane>
+     </Pane>
     )
   }
 }
