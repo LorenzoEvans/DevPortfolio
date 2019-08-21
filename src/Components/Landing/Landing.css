@@ -62,7 +62,7 @@
 
 .button-div {
  position: absolute;
- top: 39vh;
+ top: 46vh;
  left: 0 ;
  height: 3rem;
  width: 100% ;
@@ -73,7 +73,7 @@
  font-size: 6rem;
  color: rgba(70, 70, 69, 0.96);
  font-family: "arial";
- text-shadow: 0px 84px #2d0647f8;
+ text-shadow: -5px 7px #2d0647f8;
  /*border: 3px solid red;*/
  opacity: 0.85;
  box-shadow: 50px 50px 10px 10px #6F7983, rgb(149, 202, 255);
@@ -102,12 +102,12 @@ box-shadow: 50px 50px 50px 50px #6F7983, rgb(149, 202, 255);
 text-decoration: none;
 }
 
-.button-div:hover {
- background: repeating-linear-gradient(130deg, #837883, #582c49, #e2b3a9, #0d0a18, #707479,  #637181, rgb(51, 40, 68), #74b5be, #76638a);
-  background-size: 1400% 1400%;
- animation: backgroundgradient 20s ease-in-out infinite;
+/*.button-div:hover {*/
+/* background: repeating-linear-gradient(130deg, #837883, #582c49, #e2b3a9, #0d0a18, #707479,  #637181, rgb(51, 40, 68), #74b5be, #76638a);*/
+/*  background-size: 1400% 1400%;*/
+/* animation: backgroundgradient 20s ease-in-out infinite;*/
 
-}
+/*}*/
 
 .enter-button:focus {outline:0;}
 
@@ -116,7 +116,8 @@ text-decoration: none;
  color: rgba(138, 134, 139, 0.966);
  font-size: 90px ;
  margin-bottom: 300px ;
- margin-left: 545px ;
+ margin-left: 345px ;
+ /*border: 3px solid red ;*/
  padding-right: 100px;
  text-decoration: none;
  font-family: "Bungee Shade";

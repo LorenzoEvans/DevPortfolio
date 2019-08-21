@@ -62,7 +62,7 @@ function Landing()  {
      <div className="background">
       <div className="overlay">
        <div className="title" >La Maison De #0xLE</div>
-       <span className={"enter-button"} >
+       <span className={"button-div"} >
        <NavLink className={"classRandom"} activeClassName={"enter-button"} exact to="/home" activeStyle={{textDecoration: 'none'}}>
        Enter
        </NavLink>
