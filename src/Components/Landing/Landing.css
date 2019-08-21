@@ -33,6 +33,7 @@
  justify-content: center;
  align-items: center;
  padding-top: 9.2rem;
+ margin-bottom: 130px ;
  width: 100%;
  font-weight: 700;
  letter-spacing: 3px ;
@@ -87,6 +88,11 @@
  align-content: center;
 font-size: 6rem;
 z-index: 4;
+margin-top: 200px;
+width: 500px;
+margin-left: 90px ;
+height: 90px ;
+border: 5px solid pink ;
  color: rgba(138, 134, 139, 0.966);
  background: transparent ;
  background: repeating-linear-gradient(300deg, #837883, #582c49, #e2b3a9, #0d0a18, #707479,  #637181, rgb(51, 40, 68), #74b5be, #76638a);
@@ -109,8 +115,23 @@ text-decoration: none;
 .classRandom {
  color: rgba(138, 134, 139, 0.966);
  font-size: 90px ;
- margin-top: 200px ;
+ margin-bottom: 300px ;
+ margin-left: 545px ;
+ padding-right: 100px;
  text-decoration: none;
  font-family: "Bungee Shade";
- width: 400px;
+ width: 93vw;
+}
+
+.classRandom2 {
+ /*color: rgba(138, 134, 139, 0.966);*/
+ /*font-size: 90px ;*/
+ /*margin-top: 200px ;*/
+ /*margin-right: 300px ;*/
+ /*padding-right: 100px;*/
+ border: 2px solid green;
+ margin-top: 200px;
+ /*text-decoration: none;*/
+ /*font-family: "Bungee Shade";*/
+ /*width: 400px;*/
 }
