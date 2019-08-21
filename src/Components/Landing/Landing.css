@@ -28,7 +28,7 @@
 .title {
  opacity: 1;
  color: #503a3a;
- font-size: 40px;
+ font-size: 6rem;
  display: flex;
  justify-content: center;
  align-items: center;
@@ -37,7 +37,7 @@
  font-weight: 700;
  letter-spacing: 3px ;
  font-family: 'Bungee Shade';
- text-shadow: 0px 44px #74b5be;
+ text-shadow: 0px 74px #74b5be;
 }
 
 .title2 {
@@ -51,11 +51,12 @@
  top: 40vh ;
  width: 100% ;
  color:  #d6b3e4;
- font-size: 40px;
+ font-size: 6rem;
  font-style: bold;
+ margin-bottom: 20px;
  letter-spacing: 3px ;
  font-family: 'Bungee Shade';
- text-shadow: 0px 44px #8eabbe;
+ text-shadow: 0px 74px #8eabbe;
 } 
 
 .button-div {
@@ -68,10 +69,10 @@
  display: flex;
  justify-content: center;
  align-items: center;
- font-size: 4rem;
+ font-size: 6rem;
  color: rgba(70, 70, 69, 0.96);
  font-family: "arial";
- text-shadow: 0px 0px 20px #2d0647f8;
+ text-shadow: 0px 84px #2d0647f8;
  /*border: 3px solid red;*/
  opacity: 0.85;
  box-shadow: 50px 50px 10px 10px #6F7983, rgb(149, 202, 255);
@@ -84,15 +85,10 @@
  opacity: 0.7;
  text-align: center;
  align-content: center;
-height: 80px ;
-font-size: 2rem;
-width: 400px ;
-z-index: 5;
-font-family: "Bungee Shade";
+font-size: 6rem;
+z-index: 4;
  color: rgba(138, 134, 139, 0.966);
  background: transparent ;
- margin: 200px 0px 0px 32vw ;
- border: 2px solid green;
  background: repeating-linear-gradient(300deg, #837883, #582c49, #e2b3a9, #0d0a18, #707479,  #637181, rgb(51, 40, 68), #74b5be, #76638a);
  background-size: 1400% 1400%;
  animation: backgroundgradient 20s ease-in-out infinite;
@@ -109,3 +105,12 @@ text-decoration: none;
 
 .enter-button:focus {outline:0;}
 
+
+.classRandom {
+ color: rgba(138, 134, 139, 0.966);
+ font-size: 90px ;
+ margin-top: 200px ;
+ text-decoration: none;
+ font-family: "Bungee Shade";
+ width: 400px;
+}

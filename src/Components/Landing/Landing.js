@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import "./Landing.css"
 import { Router, Link } from '@reach/router'
+import { NavLink } from 'react-router-dom'
 import {useRoutes, A} from 'hookrouter'
 import styled  from 'styled-components'
 import Home from '../Home/Home'
@@ -53,15 +54,18 @@ const NoPageFound = () => {
   )
 }
 
+
+
 function Landing()  {
+
     return (
-      <div className="overlay">
      <div className="background">
+      <div className="overlay">
        <div className="title" >La Maison De #0xLE</div>
-       <span className={"enter-button"}>
-       <Link to="/home">
+       <span className={"classRandom"} >
+       <NavLink className={"classRandom"} activeClassName={"enter-button"} exact to="/home" activeStyle={{textDecoration: 'none'}}>
        Enter
-       </Link>
+       </NavLink>
        </span>
        <div className="title2" >La Maison De #0xLE</div>
       </div>
