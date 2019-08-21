@@ -87,9 +87,9 @@ class Home extends Component {
       >
         <div className="inner-pane">
 
+        Contact
         </div>
 
-        Contact
       </Pane>
     </div>
     )
