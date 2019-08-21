@@ -1,7 +1,4 @@
 .pane-styling {
-    border: 2px solid black ;
-    width: 960px;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -14,4 +11,15 @@
     height: inherit;
     width: inherit;
 
+}
+
+.grid-image {
+    width: 98%;
+    height: 100%;
+}
+
+.grid-content {
+position: absolute;
+top: 0;
+left: 0;
 }
