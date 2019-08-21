@@ -4,33 +4,20 @@ import './App.css';
 import { Route, Link, Switch } from 'react-router-dom'
 import Landing from './Components/Landing/Landing'
 import Home from './Components/Home/Home'
+import { Router } from '@reach/router'
 
 
 
 class App extends React.Component {
 
- constructor(props) {
-  super(props)
-  this.state = {
-    onLanding: true,
-   }
-  this.handleState = this.handleState.bind(this)
-
- }
-
- handleState = () => {
-  this.setState({
-   onLanding: !this.onLanding
-  })
- }
 
  render () {
   return (
    <>
-    <Switch>
-     <Route exact path="/" component={Landing}/>
-     <Route exact path="/home" component={Home}/>
-    </Switch>
+    <Router>
+     <Landing path="/" />
+     <Home path="/" />
+    </Router>
    </>
   );
  }

@@ -12,8 +12,8 @@ html {
   pointer-events: none;
 }
  * {
-  height: 100vh;
-  box-sizing: border-box;
+  /*height: 100vh;*/
+  /*box-sizing: border-box;*/
  }
 .App-header {
   background-color: #282c34;
