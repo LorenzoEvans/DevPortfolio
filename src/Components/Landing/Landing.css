@@ -63,9 +63,9 @@
 .button-div {
  position: absolute;
  top: 46vh;
- left: 0 ;
+ left: 20vh ;
  height: 3rem;
- width: 100% ;
+ width: 80% ;
  height: 10% ;
  display: flex;
  justify-content: center;
@@ -76,9 +76,9 @@
  text-shadow: -5px 7px #2d0647f8;
  /*border: 3px solid red;*/
  opacity: 0.85;
- box-shadow: 50px 50px 10px 10px #6F7983, rgb(149, 202, 255);
- background: repeating-linear-gradient(330deg, #6F7983,  #0c1f36, #4d4d4d, #0d0a18, #707479,  #637181, rgb(51, 40, 68), #74b5be, #76638a);
- background-size: 1400% 1400%;
+ /*box-shadow: 50px 50px 10px 10px #6F7983, rgb(149, 202, 255);*/
+ /*background: repeating-linear-gradient(330deg, #6F7983,  #0c1f36, #4d4d4d, #0d0a18, #707479,  #637181, rgb(51, 40, 68), #74b5be, #76638a);*/
+ /*background-size: 1400% 1400%;*/
  animation: backgroundgradient 20s ease-in-out infinite;
 }
 
@@ -102,12 +102,12 @@ box-shadow: 50px 50px 50px 50px #6F7983, rgb(149, 202, 255);
 text-decoration: none;
 }
 
-/*.button-div:hover {*/
-/* background: repeating-linear-gradient(130deg, #837883, #582c49, #e2b3a9, #0d0a18, #707479,  #637181, rgb(51, 40, 68), #74b5be, #76638a);*/
-/*  background-size: 1400% 1400%;*/
-/* animation: backgroundgradient 20s ease-in-out infinite;*/
+.enter-button:hover {
+ background: repeating-linear-gradient(130deg, #837883, #582c49, #e2b3a9, #0d0a18, #707479,  #637181, rgb(51, 40, 68), #74b5be, #76638a);
+  background-size: 1400% 1400%;
+ animation: backgroundgradient 20s ease-in-out infinite;
 
-/*}*/
+}
 
 .enter-button:focus {outline:0;}
 
@@ -115,13 +115,14 @@ text-decoration: none;
 .classRandom {
  color: rgba(138, 134, 139, 0.966);
  font-size: 90px ;
- margin-bottom: 300px ;
- margin-left: 345px ;
+ margin-bottom: 150px ;
+ margin-left: 380px ;
  /*border: 3px solid red ;*/
  padding-right: 100px;
  text-decoration: none;
  font-family: "Bungee Shade";
  width: 93vw;
+
 }
 
 .classRandom2 {
@@ -130,8 +131,8 @@ text-decoration: none;
  /*margin-top: 200px ;*/
  /*margin-right: 300px ;*/
  /*padding-right: 100px;*/
- border: 2px solid green;
  margin-top: 200px;
+
  /*text-decoration: none;*/
  /*font-family: "Bungee Shade";*/
  /*width: 400px;*/

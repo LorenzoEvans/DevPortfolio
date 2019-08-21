@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Pane, Tablist, SidebarTab, Paragraph } from 'evergreen-ui';
-
+import {Pane, Tablist, SidebarTab, Paragraph, majorScale} from 'evergreen-ui';
+import './Home.css'
 
 
 class Home extends Component {
@@ -15,19 +15,83 @@ class Home extends Component {
  
   render() {
     return (
+    <div className={"pane-styling"}>
      <Pane
-     height={120}
+     height={majorScale(12)}
      width={240}
      display="flex"
      alignItems="center"
      justifyContent="center"
-     background="neutral.dark"
-     border="2px solid green"
+     border="default"
+     background="overlay"
      >
-      <span> One </span>
-      <span> Two </span>
-      <span> Three </span>
+       <div className="inner-pane">
+
+      About
+       </div>
+
      </Pane>
+      <Pane
+        height={majorScale(12)}
+        width={240}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        border="default"
+        background="overlay"
+      >
+        <div className="inner-pane">
+
+        Projects
+        </div>
+
+      </Pane>
+      <Pane
+        height={majorScale(12)}
+        width={240}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        border="default"
+        background="overlay"
+      >
+        <div className="inner-pane">
+
+        Writing
+        </div>
+
+      </Pane>
+      <Pane
+        height={majorScale(12)}
+        width={240}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        border="default"
+        background="overlay"
+      >
+        <div className="inner-pane">
+
+        Art
+        </div>
+
+      </Pane>
+      <Pane
+        height={majorScale(12)}
+        width={240}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        border="default"
+        background="overlay"
+      >
+        <div className="inner-pane">
+
+        </div>
+
+        Contact
+      </Pane>
+    </div>
     )
   }
 }
