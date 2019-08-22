@@ -20,30 +20,27 @@ class Home extends Component {
       rows={['70vw', "70vw"]}
       columns={['100vh', '100vh']}
       areas={[
-          {name: 'background', start: [0,0], end: [1, 1]}]}
+          {name: 'background', start: [0,0], end: [1, 0]}]}
       >
         <Box gridArea={"background"}>
 
-      <Image
-      className={"grid-image"}
-      fit={"cover"} src="https://images.unsplash.com/photo-1564951405282-6e79578207c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"/>
         </Box>
 
-      {/*<Grid*/}
-      {/*className={"grid-content"}*/}
-      {/*rows={['small', 'small']}*/}
-      {/*columns={['xsmall', 'medium']}*/}
-      {/*gap={"medium"}*/}
-      {/*areas={[*/}
-      {/*  {name: 'header', start: [0, 0], end: [1, 0]},*/}
-      {/*  {name: 'nav', start: [0, 1], end: [0, 1]},*/}
-      {/*  {name: 'main', start: [1, 1], end: [1, 1]}*/}
-      {/*  ]}*/}
-      {/*>*/}
-      {/*<Box className={"grid-content"} gridArea={"header"} background={"brand"}/>*/}
-      {/*<Box gridArea={"nav"} background={"light-5"}/>*/}
-      {/*<Box gridArea={"main"} background={"light-2"} />*/}
-      {/*</Grid>*/}
+      <Grid
+      className={"grid-content"}
+      rows={['small', 'small']}
+      columns={['xsmall', 'medium']}
+      gap={"medium"}
+      areas={[
+        {name: 'header', start: [0, 0], end: [1, 0]},
+        {name: 'nav', start: [0, 1], end: [0, 1]},
+        {name: 'main', start: [1, 1], end: [1, 1]}
+        ]}
+      >
+      <Box className={"grid-content"} gridArea={"header"} background={"brand"}/>*/}
+      <Box gridArea={"nav"} background={"light-5"}/>*/}
+      <Box gridArea={"main"} background={"light-2"} />*/}
+      </Grid>
      {/*<Pane*/}
      {/*height={majorScale(12)}*/}
      {/*width={240}*/}
