@@ -37,85 +37,10 @@ class Home extends Component {
         {name: 'main', start: [1, 1], end: [1, 1]}
         ]}
       >
-      <Box className={"grid-content"} gridArea={"header"} background={"brand"}/>*/}
-      <Box gridArea={"nav"} background={"light-5"}/>*/}
-      <Box gridArea={"main"} background={"light-2"} />*/}
+      <Box className={"grid-content"} gridArea={"header"} background={"brand"}/>
+      <Box gridArea={"nav"} background={"light-5"}/>
+      <Box gridArea={"main"} background={"light-2"} />
       </Grid>
-     {/*<Pane*/}
-     {/*height={majorScale(12)}*/}
-     {/*width={240}*/}
-     {/*display="flex"*/}
-     {/*alignItems="center"*/}
-     {/*justifyContent="center"*/}
-     {/*border="default"*/}
-     {/*background="overlay"*/}
-     {/*>*/}
-     {/*  <div className="inner-pane">*/}
-
-     {/* About*/}
-     {/*  </div>*/}
-
-     {/*</Pane>*/}
-     {/* <Pane*/}
-     {/*   height={majorScale(12)}*/}
-     {/*   width={240}*/}
-     {/*   display="flex"*/}
-     {/*   alignItems="center"*/}
-     {/*   justifyContent="center"*/}
-     {/*   border="default"*/}
-     {/*   background="overlay"*/}
-     {/* >*/}
-     {/*   <div className="inner-pane">*/}
-
-     {/*   Projects*/}
-     {/*   </div>*/}
-
-     {/* </Pane>*/}
-     {/* <Pane*/}
-     {/*   height={majorScale(12)}*/}
-     {/*   width={240}*/}
-     {/*   display="flex"*/}
-     {/*   alignItems="center"*/}
-     {/*   justifyContent="center"*/}
-     {/*   border="default"*/}
-     {/*   background="overlay"*/}
-     {/* >*/}
-     {/*   <div className="inner-pane">*/}
-
-     {/*   Writing*/}
-     {/*   </div>*/}
-
-     {/* </Pane>*/}
-     {/* <Pane*/}
-     {/*   height={majorScale(12)}*/}
-     {/*   width={240}*/}
-     {/*   display="flex"*/}
-     {/*   alignItems="center"*/}
-     {/*   justifyContent="center"*/}
-     {/*   border="default"*/}
-     {/*   background="overlay"*/}
-     {/* >*/}
-     {/*   <div className="inner-pane">*/}
-
-     {/*   Art*/}
-     {/*   </div>*/}
-
-     {/* </Pane>*/}
-     {/* <Pane*/}
-     {/*   height={majorScale(12)}*/}
-     {/*   width={240}*/}
-     {/*   display="flex"*/}
-     {/*   alignItems="center"*/}
-     {/*   justifyContent="center"*/}
-     {/*   border="default"*/}
-     {/*   background="overlay"*/}
-     {/* >*/}
-     {/*   <div className="inner-pane">*/}
-
-     {/*   Contact*/}
-     {/*   </div>*/}
-
-     {/* </Pane>*/}
       </Grid>
      </>
     )
