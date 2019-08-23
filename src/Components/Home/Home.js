@@ -1,7 +1,21 @@
 import React, { Component } from 'react'
-import {Pane, Tablist, SidebarTab, Paragraph, majorScale} from 'evergreen-ui';
 import './Home.css'
-import { Box, Button, Grid, Image } from 'grommet'
+import { Box, Button, Grid, Image, Menu } from 'grommet'
+
+
+const MenuNav = () => {
+  return (
+    <Menu
+      label="Directory"
+      items={[
+        { label: "About", onClick: () => {}},
+        { label: "Projects", onClick: () => {}}
+      ]}
+    />
+  )
+}
+
+
 
 class Home extends Component {
  constructor(props) {
@@ -16,6 +30,7 @@ class Home extends Component {
   render() {
     return (
     <>
+    <MenuNav/>
       <Grid
       rows={['70vw', "70vw"]}
       columns={['100vh', '100vh']}
