@@ -43,7 +43,7 @@ class Home extends Component {
         border: undefined,
         gap: "110px",
         justify: "start",
-
+        width: "100%",
         header: {
         background: undefined,
         },
@@ -72,7 +72,9 @@ class Home extends Component {
     return (
       <div>
         <Grommet theme={theme}>
-          <Tabs className={"nav-tabs"} >
+        <Box style={{display: "flex", flexDirection: "row", border: "2px solid red"}}>
+        <Clock type={"digital"}/>
+          <Tabs className={"nav-tabs"} children={[<Clock type={"digital"}/>]} style={{width: "100%"}}>
             <Tab title="About" style={{width: "105px" ,borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">One</Box>
             </Tab>
@@ -96,6 +98,7 @@ class Home extends Component {
               <Box pad="small">Five</Box>
             </Tab>
           </Tabs>
+        </Box>
         </Grommet>
       </div>
     );
