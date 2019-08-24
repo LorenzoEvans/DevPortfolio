@@ -6,10 +6,10 @@ import { Box, Button, Grid, Image, Menu } from 'grommet'
 const MenuNav = () => {
   return (
     <Menu
-      label="Directory"
+      label="Menu"
       items={[
-        { label: "About", onClick: () => {}},
-        { label: "Projects", onClick: () => {}}
+        { label: 'First Action', onClick: () => {} },
+        { label: 'Second Action', onClick: () => {} },
       ]}
     />
   )
