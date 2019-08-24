@@ -22,7 +22,3 @@
 border: 1px solid black ;
 }
 
-.nav-tabs {
-    display: flex;
-    flex-direction: column;
-}
