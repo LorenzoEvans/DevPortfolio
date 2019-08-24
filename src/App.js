@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.scss';
+import './App.css';
 import { Route, Link, Switch } from 'react-router-dom'
 import Landing from './Components/Landing/Landing'
 import Home from './Components/Home/Home'
