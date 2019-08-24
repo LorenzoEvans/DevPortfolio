@@ -1,12 +1,20 @@
 import React, { Component } from 'react'
 import './Home.css'
-import { Grommet, Box, Button, Grid, Image, Menu, Tabs, Tab, Carousel,  Clock } from 'grommet'
-import { TreeOption } from 'grommet-icons'
+import { Grommet, Box, Button, Grid, Image, Menu, Tabs, Text, Tab, Carousel,  Clock } from 'grommet'
+import { Projects } from 'grommet-icons'
+
+const RichTabTitle = ({ icon, label }) => (
+  <Box direction="row" align="center" gap="xsmall" margin="xsmall">
+    {icon}
+    <Text size="small">
+      <strong>{label}</strong>
+    </Text>
+  </Box>
+);
 
 class Home extends Component {
  constructor(props) {
    super(props)
-
    this.state = {
       tabs: ['About', 'Projects', 'Writing', 'Art', 'Contact'],
       position: 'left',
@@ -20,7 +28,7 @@ class Home extends Component {
       const theme = {
       global: {
       edgeSize: {
-      small: "10px"
+      small: "8px"
       },
         elevation: {
           light: {
@@ -31,49 +39,53 @@ class Home extends Component {
       },
       tabs: {
         borderBottomWidth: "medium",
-        background: "dark-3",
+        background: "light-5",
         border: undefined,
-        gap: "90px",
+        gap: "110px",
         justify: "start",
-        flex: {
-        "grow" : true,
-        "shrink": false
-        }
+
+        header: {
+        background: undefined,
+        },
+        paddingTop: "5px"
       },
       tab: {
+      background: "transparent",
+        color: "#582C49",
         active:{
-          // background: "light-3",
-          color: "neutral-3"
+          color: "#E2B3A9",
         },
         border: undefined,
-        color: "white",
         pad: {
         bottom: "light-2",
         horizontal: "small",
         borderBottomStyle: {
-        width: "90px"
+        width: "20px"
         },
-        border: undefined
+        // border: undefined
         },
+        hover: {
+        border: "dark-2"
+        }
       }
       }
     return (
       <div>
         <Grommet theme={theme}>
           <Tabs className={"nav-tabs"} >
-            <Tab title="About" style={{width: "90px" ,borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title="About" style={{width: "95px" ,borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">One</Box>
             </Tab>
-            <Tab title="Projects" style={{width: "90px" ,borderBottom: "2px solid black", borderLeft: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title={<RichTabTitle icon={<Projects/>} label={"Projects"}/>} style={{width: "95px" ,borderBottom: "2px solid black", borderLeft: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+              <Box pad="small">Two </Box>
+            </Tab>
+            <Tab title="Art" style={{width: "95px" , borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">Two</Box>
             </Tab>
-            <Tab title="Art" style={{width: "90px" , borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title="Writing" style={{width: "95px" ,borderLeft: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">Two</Box>
             </Tab>
-            <Tab title="Writing" style={{width: "90px" ,borderLeft: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
-              <Box pad="small">Two</Box>
-            </Tab>
-            <Tab title="Music" style={{width: "90px" ,borderRight: "2px solid black", borderBottom: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title="Music" style={{width: "95px" ,borderRight: "2px solid black", borderBottom: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">Two</Box>
             </Tab>
           </Tabs>
