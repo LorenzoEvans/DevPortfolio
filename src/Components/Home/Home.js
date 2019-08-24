@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Home.css'
-import { Grommet, Box, Button, Grid, Image, Menu, Tabs, Tab } from 'grommet'
+import { Grommet, Box, Button, Grid, Image, Menu, Tabs, Tab, Carousel } from 'grommet'
 import { TreeOption } from 'grommet-icons'
 
 class Home extends Component {
@@ -18,8 +18,20 @@ class Home extends Component {
 
   render() {
       const theme = {
-      global: {},
+      global: {
+      edgeSize: {
+      small: "10px"
+      },
+        elevation: {
+          light: {
+            small: "0px 1px 5px rgba(12, 67, 170, 0.50)",
+            medium: "0px 3px 8px rgba(32, 34, 112, 0.50)"
+          }
+        }
+      },
       tabs: {
+        borderBottomWidth: "medium",
+        background: "dark-3",
         gap: "90px",
         justify: "start",
         flex: {
@@ -27,13 +39,30 @@ class Home extends Component {
         "shrink": false
         }
       },
+      tab: {
+        active:{
+          // background: "light-3",
+          color: "neutral-3"
+        },
+        color: "white",
+        pad: {
+        bottom: "light-2",
+        horizontal: "small",
+        borderBottomStyle: {
+        width: "90px"
+        }
+        },
+        border: {
+        width: "90px"
+        }
+      }
       }
     return (
       <div>
         <Grommet theme={theme}>
           <Tabs className={"nav-tabs"}>
             <Tab title="About">
-              <Box pad="medium">One</Box>
+              <Box pad="small">One</Box>
             </Tab>
             <Tab title="Projects">
               <Box pad="medium">Two</Box>
