@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Home.css'
 import { Grommet, Box, Button, Grid, Image, Menu, Tabs, Text, Tab, Carousel,  Clock } from 'grommet'
-import { Projects } from 'grommet-icons'
+import { Projects, Aggregate, Brush, Notes, Music } from 'grommet-icons'
 
 const RichTabTitle = ({ icon, label }) => (
   <Box direction="row" align="center" gap="xsmall" margin="xsmall">
@@ -73,30 +73,30 @@ class Home extends Component {
       <div>
         <Grommet theme={theme}>
         <Box style={{display: "flex", flexDirection: "row", height: "100vh"}}>
-          <Box background={"dark-4"} width={"400px"}>
+          <Box border={{color: "#E2B3A9", size: "large"}} round={{ corner: "right", size: "15px" }} width={"400px"}>
         <Clock type={"digital"}/>
           </Box>
           <Tabs className={"nav-tabs"} children={[<Clock type={"digital"}/>]} style={{width: "100%"}}>
-            <Tab title="About" style={{marginTop: "20px", width: "105px" ,borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title={<RichTabTitle label={"About"} icon={<Aggregate color={"dark-1"} size={"medium"}/>}/>} style={{marginTop: "20px", width: "105px" ,borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">One</Box>
             </Tab>
-            <Tab title={<RichTabTitle icon={<Projects color={"dark-1"}size={"small"}/>} label={"Projects"}/>} style={{marginTop: "20px", width: "105px" ,borderBottom: "2px solid black", borderLeft: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title={<RichTabTitle icon={<Projects color={"dark-1"}size={"medium"}/>} label={"Projects"}/>} style={{marginTop: "20px", width: "105px" ,borderBottom: "2px solid black", borderLeft: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box
                 direction="row"
-                border={{ color: 'brand', size: 'small' }}
+                border={{ color: 'brand', size: 'small', style: 'inset' }}
                 pad="medium"
               >
                 <Box pad="small" background="dark-3" />
                 <Box pad="medium" background="light-3" />
               </Box>
             </Tab>
-            <Tab title="Art" style={{marginTop: "20px", width: "105px" , borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title={<RichTabTitle label={"Art"} icon={<Brush color={"dark-1"} size={"medium"}/>}/>} style={{marginTop: "20px", width: "105px" , borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">Three</Box>
             </Tab>
-            <Tab title="Writing" style={{marginTop: "20px", width: "105px" ,borderLeft: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title={<RichTabTitle label={"Writing"} icon={<Notes color={"dark-1"} size={"medium"}/>}/>}  style={{marginTop: "20px", width: "105px" ,borderLeft: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">Four</Box>
             </Tab>
-            <Tab title="Music" style={{marginTop: "20px", width: "105px" ,borderRight: "2px solid black", borderBottom: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title={<RichTabTitle label={"Music"} icon={<Music color={"dark-1"} size={"medium"}/>}/>}  style={{marginTop: "20px", width: "105px" ,borderRight: "2px solid black", borderBottom: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">Five</Box>
             </Tab>
           </Tabs>
