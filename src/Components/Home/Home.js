@@ -1,7 +1,58 @@
 import React, { Component } from 'react'
 import './Home.css'
-import { Grommet, Box, Button, AccordionPanel, Accordion, Grid, Image, Menu, Tabs, Text, Tab, Carousel,  Clock } from 'grommet'
-import { Projects, Aggregate, Brush, Notes, Music } from 'grommet-icons'
+import {
+Grommet,
+Box,
+Button,
+AccordionPanel,
+Heading,
+Accordion,
+Grid,
+Tabs,
+Text,
+ThemeContext,
+Tab,
+Clock } from 'grommet'
+import { Projects, Aggregate, Bookmark, User, Brush, Notes, Music, CircleInformation, FormAdd, FormSubtract } from 'grommet-icons'
+
+class RichPanel extends Component {
+  state = {
+    hovering: false
+  };
+
+  renderPanelTitle = () => {
+    const { icon, label } = this.props;
+    const { hovering } = this.state;
+    return (
+      <Box
+        direction="row"
+        align="center"
+        gap="small"
+        pad={{ horizontal: "small" }}
+      >
+        {icon}
+        <Heading level={4} color={hovering ? "dark-1" : "dark-3"}>
+          {label}
+        </Heading>
+      </Box>
+    );
+  };
+
+  render() {
+    const { children } = this.props;
+    return (
+      <AccordionPanel
+        label={this.renderPanelTitle()}
+        onMouseOver={() => this.setState({ hovering: true })}
+        onMouseOut={() => this.setState({ hovering: false })}
+        onFocus={() => this.setState({ hovering: true })}
+        onBlur={() => this.setState({ hovering: false })}
+      >
+        {children}
+      </AccordionPanel>
+    );
+  }
+}
 
 const RichTabTitle = ({ icon, label }) => (
   <Box direction="row" align="center" gap="xsmall" margin="xsmall">
@@ -12,19 +63,60 @@ const RichTabTitle = ({ icon, label }) => (
   </Box>
 );
 
+const richAccordionTheme = {
+  accordion: {
+    icons: {
+      collapse: FormSubtract,
+      expand: FormAdd
+    }
+  }
+};
+
+const spinning = (
+  <svg
+    version="1.1"
+    viewBox="0 0 32 32"
+    width="32px"
+    height="32px"
+    fill="#333333"
+  >
+    <path
+      opacity=".25"
+      d="M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4"
+    />
+    <path d="M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 16 16"
+        to="360 16 16"
+        dur="0.8s"
+        repeatCount="indefinite"
+      />
+    </path>
+  </svg>
+);
+
+const loading = (
+  <Box align="center" justify="center" style={{ height: "100px" }}>
+    {spinning}
+  </Box>
+);
 class Home extends Component {
  constructor(props) {
    super(props)
    this.state = {
       tabs: ['About', 'Projects', 'Writing', 'Art', 'Contact'],
       position: 'left',
-      visible: false
+      visible: false,
+      highlightLoaded: false,
    }
  }
 
 
 
   render() {
+  const { highlightLoaded } = this.state
       const theme = {
       global: {
       edgeSize: {
