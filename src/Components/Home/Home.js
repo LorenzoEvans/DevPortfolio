@@ -189,19 +189,21 @@ class Home extends Component {
           size: "large",
           style: 'double'}}
           width={"400px"} overflow={"auto"}>
-        <Clock type={"digital"}/>
+
             <Box fill direction="row" color={"light-2"}>
-              <Box basis="medium" border={undefined}>
+              <Box basis="medium" border={undefined} >
                 <Box
-                  flex={true}
                   border={"bottom"}
                   background={"transparent"}
                   as="header"
                   pad={{ horizontal: "small" }}
+                  style={{display: "flex", flexDirection: "column-reverse", justifyContent: "space-between", alignItems: "center"}}
                 >
+
                   <Heading level={2} style={{fontFamily: "Bungee Shade", color: "#BEA49F", opacity: 0.6}}>
-                    <strong>0xLE</strong>
+                    <strong>#0xLE</strong>
                   </Heading>
+                  <Clock type={"digital"} size={"large"} style={{color: "#BEA49F"}}/>
                 </Box>
                 <ThemeContext.Extend value={richAccordionTheme}>
                   <Accordion
@@ -222,7 +224,7 @@ class Home extends Component {
                           horizontal: "small",
                           top: "small"
                         }}
-                        gap="medium"
+                        gap="xsmall"
                       >
                         <Box gap="xsmall">
                           <Text color="light-3">
@@ -291,7 +293,7 @@ class Home extends Component {
           </Box>
           <Tabs className={"nav-tabs"} children={[<Clock type={"digital"}/>]} style={{width: "100%"}}>
             <Tab title={<RichTabTitle label={"About"} icon={<Aggregate color={"dark-1"} size={"20px"}/>}/>} style={{marginTop: "20px", width: "105px" ,borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
-              <Box pad="small">One</Box>
+              <Box pad="small" background={"light-3"}>One</Box>
             </Tab>
             <Tab title={<RichTabTitle icon={<Apps color={"dark-1"}size={"20px"}/>} label={"Apps"}/>} style={{marginTop: "20px", width: "105px" ,borderBottom: "2px solid black", borderLeft: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box
