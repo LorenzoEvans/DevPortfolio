@@ -73,14 +73,14 @@ class Home extends Component {
       <div>
         <Grommet theme={theme}>
         <Box style={{display: "flex", flexDirection: "row", height: "100vh"}}>
-          <Box>
+          <Box background={"dark-4"} width={"400px"}>
         <Clock type={"digital"}/>
           </Box>
           <Tabs className={"nav-tabs"} children={[<Clock type={"digital"}/>]} style={{width: "100%"}}>
             <Tab title="About" style={{marginTop: "20px", width: "105px" ,borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">One</Box>
             </Tab>
-            <Tab title={<RichTabTitle icon={<Projects size={"small"}/>} label={"Projects"}/>} style={{marginTop: "20px", width: "105px" ,borderBottom: "2px solid black", borderLeft: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title={<RichTabTitle icon={<Projects color={"dark-1"}size={"small"}/>} label={"Projects"}/>} style={{marginTop: "20px", width: "105px" ,borderBottom: "2px solid black", borderLeft: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box
                 direction="row"
                 border={{ color: 'brand', size: 'small' }}
