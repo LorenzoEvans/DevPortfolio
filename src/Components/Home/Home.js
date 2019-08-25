@@ -72,13 +72,15 @@ class Home extends Component {
     return (
       <div>
         <Grommet theme={theme}>
-        <Box style={{display: "flex", flexDirection: "row", border: "2px solid red"}}>
+        <Box style={{display: "flex", flexDirection: "row", height: "100vh"}}>
+          <Box>
         <Clock type={"digital"}/>
+          </Box>
           <Tabs className={"nav-tabs"} children={[<Clock type={"digital"}/>]} style={{width: "100%"}}>
-            <Tab title="About" style={{width: "105px" ,borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title="About" style={{marginTop: "20px", width: "105px" ,borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">One</Box>
             </Tab>
-            <Tab title={<RichTabTitle icon={<Projects size={"small"}/>} label={"Projects"}/>} style={{width: "105px" ,borderBottom: "2px solid black", borderLeft: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title={<RichTabTitle icon={<Projects size={"small"}/>} label={"Projects"}/>} style={{marginTop: "20px", width: "105px" ,borderBottom: "2px solid black", borderLeft: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box
                 direction="row"
                 border={{ color: 'brand', size: 'small' }}
@@ -88,13 +90,13 @@ class Home extends Component {
                 <Box pad="medium" background="light-3" />
               </Box>
             </Tab>
-            <Tab title="Art" style={{width: "105px" , borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title="Art" style={{marginTop: "20px", width: "105px" , borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">Three</Box>
             </Tab>
-            <Tab title="Writing" style={{width: "105px" ,borderLeft: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title="Writing" style={{marginTop: "20px", width: "105px" ,borderLeft: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">Four</Box>
             </Tab>
-            <Tab title="Music" style={{width: "105px" ,borderRight: "2px solid black", borderBottom: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title="Music" style={{marginTop: "20px", width: "105px" ,borderRight: "2px solid black", borderBottom: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">Five</Box>
             </Tab>
           </Tabs>
