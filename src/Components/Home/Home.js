@@ -12,8 +12,9 @@ Tabs,
 Text,
 ThemeContext,
 Tab,
+InfiniteScroll,
 Clock } from 'grommet'
-import { Projects, Aggregate, Bookmark, User, Brush, Notes, Music, CircleInformation, FormAdd, FormSubtract } from 'grommet-icons'
+import { Apps, Aggregate, Bookmark, User, Brush, Notes, Music, CircleInformation, FormAdd, FormSubtract } from 'grommet-icons'
 
 class RichPanel extends Component {
   state = {
@@ -31,7 +32,7 @@ class RichPanel extends Component {
         pad={{ horizontal: "small" }}
       >
         {icon}
-        <Heading level={4} color={hovering ? "dark-1" : "dark-3"}>
+        <Heading level={4} color={hovering ? "#ac9bb4" : "light-4"}>
           {label}
         </Heading>
       </Box>
@@ -129,6 +130,20 @@ class Home extends Component {
           }
         }
       },
+      box: {
+        elevation: {
+          "light": {
+            "none": "none",
+            "xsmall": "0px 1px 2px rgba(0, 0, 0, 0.20)",
+            "small": "0px 2px 4px rgba(0, 0, 0, 0.20)",
+            "medium": "0px 4px 8px rgba(0, 0, 0, 0.20)",
+            "large": "0px 8px 16px rgba(0, 0, 0, 0.20)",
+            "xlarge": "0px 12px 24px rgba(0, 0, 0, 0.20)"
+          },
+          "dark": {
+          }
+        }
+      },
       tabs: {
         borderBottomWidth: "medium",
         background: "light-5",
@@ -157,28 +172,35 @@ class Home extends Component {
         // border: undefined
         },
         hover: {
-        border: "dark-2",
-        background: "#e2b3a9 "
+        border: "light-2",
+        color: "#E2B3A9"
         }
       }
       }
+      const BGG = "linear-gradient(170deg, #6F7983 -20%,  #0c1f36 -20%, #4d4d4d -20%, #0d0a18, #707479,  #637181, rgb(51, 40, 68))"
     return (
       <div>
         <Grommet theme={theme}>
-        <Box style={{display: "flex", flexDirection: "row", height: "100vh"}}>
-          <Box border={{color: "#E2B3A9", size: "large", style: 'inset'}} width={"400px"}>
+        <Box elevation="10px" style={{display: "flex", flexDirection: "row", height: "100vh",}} >
+          <Box
+          background={BGG}
+          style={{height: "100%"}}
+          border={{color: "#cdcdcd",
+          size: "large",
+          style: 'double'}}
+          width={"400px"} overflow={"auto"}>
         <Clock type={"digital"}/>
-            <Box fill direction="row">
-              <Box basis="medium" border="all">
+            <Box fill direction="row" color={"light-2"}>
+              <Box basis="medium" border={undefined}>
                 <Box
-                  flex={false}
-                  border="bottom"
-                  background="light-2"
+                  flex={true}
+                  border={"bottom"}
+                  background={"transparent"}
                   as="header"
                   pad={{ horizontal: "small" }}
                 >
-                  <Heading level={3}>
-                    <strong>About #announcements</strong>
+                  <Heading level={2} style={{fontFamily: "Bungee Shade", color: "#BEA49F", opacity: 0.6}}>
+                    <strong>0xLE</strong>
                   </Heading>
                 </Box>
                 <ThemeContext.Extend value={richAccordionTheme}>
@@ -193,17 +215,17 @@ class Home extends Component {
                       }
                     }}
                   >
-                    <RichPanel icon={<CircleInformation />} label="Channel Details">
+                    <RichPanel icon={<CircleInformation />} label="About">
                       <Box
                         pad={{
-                          bottom: "medium",
+                          bottom: "small",
                           horizontal: "small",
                           top: "small"
                         }}
                         gap="medium"
                       >
                         <Box gap="xsmall">
-                          <Text color="dark-3">
+                          <Text color="light-3">
                             <strong>Purpose</strong>
                           </Text>
                           <Text>
@@ -212,99 +234,48 @@ class Home extends Component {
                           </Text>
                         </Box>
                         <Box gap="xsmall">
-                          <Text color="dark-3">
+                          <Text color="light-3">
                             <strong>Created</strong>
                           </Text>
                           <Text>Created by Bryan Jacquot on January 19, 2016</Text>
                         </Box>
                       </Box>
                     </RichPanel>
-                    <RichPanel
-                      icon={<Bookmark color="accent-1" />}
-                      label="Highlights"
-                    >
-                      {highlightLoaded ? (
-                        <Box
-                          pad={{
-                            bottom: "medium",
-                            horizontal: "small",
-                            top: "small"
-                          }}
-                          gap="medium"
-                          overflow="auto"
-                          style={{ maxHeight: "400px" }}
-                        >
-                          <Text color="dark-3">
-                            Below is the top message in
-                            <strong>#announcements</strong>.
-                          </Text>
-                          <Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu
-                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                            non proident, sunt in culpa qui officia deserunt mollit
-                            anim id est laborum.
-                          </Text>
-                          <Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu
-                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                            non proident, sunt in culpa qui officia deserunt mollit
-                            anim id est laborum.
-                          </Text>
-                          <Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu
-                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                            non proident, sunt in culpa qui officia deserunt mollit
-                            anim id est laborum.
-                          </Text>
-                          <Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu
-                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                            non proident, sunt in culpa qui officia deserunt mollit
-                            anim id est laborum.
-                          </Text>
-                          <Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu
-                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                            non proident, sunt in culpa qui officia deserunt mollit
-                            anim id est laborum.
-                          </Text>
-                        </Box>
-                      ) : (
-                        loading
-                      )}
-                    </RichPanel>
+                      <RichPanel
+                        icon={<Bookmark color="accent-1" />}
+                        label="Highlights"
+                      >
+                        {highlightLoaded ? (
+                          <Box
+                            pad={{
+                              bottom: "small",
+                              horizontal: "small",
+                              top: "small"
+                            }}
+                            gap="medium"
+                            overflow="auto"
+                            style={{ maxHeight: "400px" }}
+                          >
+                            <Text color="dark-3">
+                              Below is the top message in
+                              <strong>#announcements</strong>.
+                            </Text>
+                            <Text>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                              sed do eiusmod tempor incididunt ut labore et dolore
+                            </Text>
+                          </Box>
+                        ) : (
+                          loading
+                        )}
+                      </RichPanel>
                     <RichPanel
                       icon={<User color="accent-2" />}
                       label="2,000 members"
                     >
                       <Box
                         pad={{
-                          bottom: "medium",
+                          bottom: "small",
                           horizontal: "small",
                           top: "small"
                         }}
@@ -322,7 +293,7 @@ class Home extends Component {
             <Tab title={<RichTabTitle label={"About"} icon={<Aggregate color={"dark-1"} size={"20px"}/>}/>} style={{marginTop: "20px", width: "105px" ,borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small">One</Box>
             </Tab>
-            <Tab title={<RichTabTitle icon={<Projects color={"dark-1"}size={"small"}/>} label={"Projects"}/>} style={{marginTop: "20px", width: "105px" ,borderBottom: "2px solid black", borderLeft: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title={<RichTabTitle icon={<Apps color={"dark-1"}size={"20px"}/>} label={"Apps"}/>} style={{marginTop: "20px", width: "105px" ,borderBottom: "2px solid black", borderLeft: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box
                 direction="row"
                 border={{ color: 'brand', size: 'small' }}
