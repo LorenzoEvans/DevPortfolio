@@ -30,7 +30,6 @@ const theme = {
   },
   tabs: {
     borderBottomWidth: "medium",
-    background: "light-5",
     border: undefined,
     gap: "110px",
     justify: "start",

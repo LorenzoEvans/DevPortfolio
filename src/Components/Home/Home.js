@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import RichPanel from './SubComponents/RichPanel'
+import Animation from "./Animations/animations";
 import { theme, richAccordionTheme, RichTabTitle, loading } from './Styling/ConstantComponents'
 import './Home.css'
 import {
@@ -16,7 +17,6 @@ ThemeContext,
 Tab,
 Clock } from 'grommet'
 import { Apps, StatusInfo, Github, Twitter, Linkedin, ContactInfo, Bookmark, Home, Brush, Notes, Music} from 'grommet-icons'
-
 class HomePage extends Component {
  constructor(props) {
    super(props);
@@ -32,6 +32,7 @@ class HomePage extends Component {
         <Grommet theme={theme}>
         <Box elevation="40px" style={{display: "flex", flexDirection: "row", height: "100vh",}} >
           <Box
+          className={"sidebar"}
           style={{height: "100%", borderImage: "black"}}
           border={{color: "#cdcdcd",
           size: "medium",
@@ -53,6 +54,7 @@ class HomePage extends Component {
                   color: "#837883", textShadow: "1.5px 1.5px 3.50px #74b5be",
                   marginBottom: "30px"}}>
                     <strong>#0xLE</strong>
+                    <Animation />
                   </Heading>
                   <Clock type={"digital"} size={"small"} style={{color: "#BEA49F"}}/>
                 </Box>
