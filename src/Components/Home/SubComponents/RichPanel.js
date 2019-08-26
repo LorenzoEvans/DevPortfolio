@@ -1,5 +1,5 @@
 
-import {AccordionPanel, Box, Heading} from "grommet/es6";
+import {AccordionPanel, Box, Heading} from "grommet";
 import React, { Component } from "react";
 
 class RichPanel extends Component {
