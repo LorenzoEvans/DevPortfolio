@@ -6,6 +6,14 @@ import anime from 'animejs';
 const myRef = React.createRef();
 const labelRef = React.createRef();
 
+const animation = anime({
+  targets: 'shape',
+  left: '240px',
+  backgroundColor: "#FFF",
+  borderRadius: ["0%", "50%"],
+  easing: 'easeInOutQuad'
+})
+
 class Container extends Component {
 
   componentDidUpdate(prevProps, prevState, snapshot) {

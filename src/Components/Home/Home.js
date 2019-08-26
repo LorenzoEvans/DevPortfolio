@@ -17,7 +17,8 @@ ThemeContext,
 Tab,
 Clock } from 'grommet'
 import { Apps, StatusInfo, Github, Twitter, Linkedin, ContactInfo, Bookmark, Home, Brush, Notes, Music} from 'grommet-icons'
-class HomePage extends Component {
+import NavBar from "./SubComponents/NavBar";
+class SideBar extends Component {
  constructor(props) {
    super(props);
    this.state = {
@@ -37,7 +38,7 @@ class HomePage extends Component {
           border={{color: "#cdcdcd",
           size: "medium",
           }}
-          width={"400px"} overflow={"auto"}>
+          width={"350px"} overflow={"auto"}>
 
             <Box fill direction="row" color={"light-2"}>
               <Box basis="medium" border={undefined} >
@@ -54,7 +55,6 @@ class HomePage extends Component {
                   color: "#837883", textShadow: "1.5px 1.5px 3.50px #74b5be",
                   marginBottom: "30px"}}>
                     <strong>#0xLE</strong>
-                    <Animation />
                   </Heading>
                   <Clock type={"digital"} size={"small"} style={{color: "#BEA49F"}}/>
                 </Box>
@@ -159,30 +159,7 @@ class HomePage extends Component {
               </Box>
             </Box>
           </Box>
-          <Tabs className={"nav-tabs"} children={[<Clock type={"digital"}/>]} style={{width: "100%"}}>
-            <Tab title={<RichTabTitle label={"Home"} icon={<Home color={"dark-1"} size={"20px"}/>}/>} style={{marginTop: "20px", width: "105px" ,borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
-              <Box pad="small" background={"light-3"}>One</Box>
-            </Tab>
-            <Tab title={<RichTabTitle icon={<Apps color={"dark-1"}size={"20px"}/>} label={"Apps"}/>} style={{marginTop: "20px", width: "105px" ,borderBottom: "2px solid black", borderLeft: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
-              <Box
-                direction="row"
-                border={{ color: 'brand', size: 'small' }}
-                pad="medium"
-              >
-                <Box pad="small" background="dark-3" />
-                <Box pad="medium" background="light-3" />
-              </Box>
-            </Tab>
-            <Tab title={<RichTabTitle label={"Art"} icon={<Brush color={"dark-1"} size={"20px"}/>}/>} style={{marginTop: "20px", width: "105px" , borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
-              <Box pad="small">Three</Box>
-            </Tab>
-            <Tab title={<RichTabTitle label={"Writing"} icon={<Notes color={"dark-1"} size={"20px"}/>}/>}  style={{marginTop: "20px", width: "105px" ,borderLeft: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
-              <Box pad="small">Four</Box>
-            </Tab>
-            <Tab title={<RichTabTitle label={"Music"} icon={<Music color={"dark-1"} size={"20px"}/>}/>}  style={{marginTop: "20px", width: "105px" ,borderRight: "2px solid black", borderBottom: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
-              <Box pad="small">Five</Box>
-            </Tab>
-          </Tabs>
+          <NavBar/>
         </Box>
         </Grommet>
       </div>
@@ -190,4 +167,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage
+export default SideBar
