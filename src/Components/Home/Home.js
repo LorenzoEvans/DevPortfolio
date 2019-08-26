@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
+import RichPanel from './SubComponents/RichPanel'
 import './Home.css'
 import {
 Grommet,
 Box,
 Button,
-AccordionPanel,
-Heading,
 Accordion,
 Anchor,
 Grid,
@@ -17,44 +16,7 @@ InfiniteScroll,
 Clock } from 'grommet'
 import { Apps, Aggregate, StatusInfo, Github, Twitter, Linkedin, ContactInfo, Bookmark, Home, Brush, Notes, Music, FormAdd, FormSubtract } from 'grommet-icons'
 
-class RichPanel extends Component {
-  state = {
-    hovering: false
-  };
 
-  renderPanelTitle = () => {
-    const { icon, label } = this.props;
-    const { hovering } = this.state;
-    return (
-      <Box
-        direction="row"
-        align="center"
-        gap="small"
-        pad={{ horizontal: "small" }}
-      >
-        {icon}
-        <Heading level={4} color={hovering ? "#ac9bb4" : "light-4"}>
-          {label}
-        </Heading>
-      </Box>
-    );
-  };
-
-  render() {
-    const { children } = this.props;
-    return (
-      <AccordionPanel
-        label={this.renderPanelTitle()}
-        onMouseOver={() => this.setState({ hovering: true })}
-        onMouseOut={() => this.setState({ hovering: false })}
-        onFocus={() => this.setState({ hovering: true })}
-        onBlur={() => this.setState({ hovering: false })}
-      >
-        {children}
-      </AccordionPanel>
-    );
-  }
-}
 
 const RichTabTitle = ({ icon, label }) => (
   <Box direction="row" align="center" gap="xsmall" margin="xsmall">
@@ -197,11 +159,10 @@ class HomePage extends Component {
         <Grommet theme={theme}>
         <Box elevation="40px" style={{display: "flex", flexDirection: "row", height: "100vh",}} >
           <Box
-          background={BGG}
-          style={{height: "100%", borderImage: "linear-gradient(to right, #582C49, #6F7983)"}}
+          style={{height: "100%", borderImage: "black"}}
           border={{color: "#cdcdcd",
-          size: "large",
-          style: 'inset'}}
+          size: "medium",
+          }}
           width={"400px"} overflow={"auto"}>
 
             <Box fill direction="row" color={"light-2"}>

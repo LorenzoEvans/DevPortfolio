@@ -5,17 +5,7 @@ import { NavLink } from 'react-router-dom'
 import {useRoutes, A} from 'hookrouter'
 import styled  from 'styled-components'
 import HomePage from '../Home/Home'
-// const EnterButton = () => {
-//
-//  return (
-//   <div  >
-//    <div >
-//     Enter
-//    </div>
-//   </div>
-//
-//  )
-// }
+
 
 const StyledLink = styled(Link)`
 
