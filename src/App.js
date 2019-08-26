@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Route, Link, Switch } from 'react-router-dom'
 import Landing from './Components/Landing/Landing'
-import Home from './Components/Home/Home'
+import HomePage from './Components/Home/Home'
 
 
 
@@ -27,13 +27,13 @@ class App extends React.Component {
  render () {
 
   const routes = {
-   "/home": () => <Home />
+   "/home": () => <HomePage />
   }
   return (
    <>
     <Switch>
      <Route exact path="/" component={Landing}/>
-     <Route exact path="/home" component={Home}/>
+     <Route exact path="/home" component={HomePage}/>
     </Switch>
    </>
   );

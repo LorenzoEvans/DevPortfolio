@@ -14,7 +14,7 @@ ThemeContext,
 Tab,
 InfiniteScroll,
 Clock } from 'grommet'
-import { Apps, Aggregate, Bookmark, User, Brush, Notes, Music, CircleInformation, FormAdd, FormSubtract } from 'grommet-icons'
+import { Apps, Aggregate, StatusInfo, ContactInfo, Bookmark, Home, Brush, Notes, Music, FormAdd, FormSubtract } from 'grommet-icons'
 
 class RichPanel extends Component {
   state = {
@@ -103,7 +103,7 @@ const loading = (
     {spinning}
   </Box>
 );
-class Home extends Component {
+class HomePage extends Component {
  constructor(props) {
    super(props)
    this.state = {
@@ -181,10 +181,10 @@ class Home extends Component {
     return (
       <div>
         <Grommet theme={theme}>
-        <Box elevation="10px" style={{display: "flex", flexDirection: "row", height: "100vh",}} >
+        <Box elevation="40px" style={{display: "flex", flexDirection: "row", height: "100vh",}} >
           <Box
           background={BGG}
-          style={{height: "100%"}}
+          style={{height: "100%", borderImage: "linear-gradient(to left, #582C49, #6F7983)"}}
           border={{color: "#cdcdcd",
           size: "large",
           style: 'double'}}
@@ -197,13 +197,16 @@ class Home extends Component {
                   background={"transparent"}
                   as="header"
                   pad={{ horizontal: "small" }}
-                  style={{display: "flex", flexDirection: "column-reverse", justifyContent: "space-between", alignItems: "center"}}
+                  style={{display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center"}}
                 >
 
-                  <Heading level={2} style={{fontFamily: "Bungee Shade", color: "#BEA49F", opacity: 0.6}}>
+                  <Heading level={3}
+                  style={{fontFamily: "Bungee Shade",
+                  color: "#837883", textShadow: "1.5px 1.5px 3.50px #74b5be",
+                  marginBottom: "30px"}}>
                     <strong>#0xLE</strong>
                   </Heading>
-                  <Clock type={"digital"} size={"large"} style={{color: "#BEA49F"}}/>
+                  <Clock type={"digital"} size={"small"} style={{color: "#BEA49F"}}/>
                 </Box>
                 <ThemeContext.Extend value={richAccordionTheme}>
                   <Accordion
@@ -217,12 +220,12 @@ class Home extends Component {
                       }
                     }}
                   >
-                    <RichPanel icon={<CircleInformation />} label="About">
+                    <RichPanel icon={<StatusInfo color="#E2B3A9" />} label="About">
                       <Box
                         pad={{
                           bottom: "small",
                           horizontal: "small",
-                          top: "small"
+                          top: "small",
                         }}
                         gap="xsmall"
                       >
@@ -237,14 +240,12 @@ class Home extends Component {
                         </Box>
                         <Box gap="xsmall">
                           <Text color="light-3">
-                            <strong>Created</strong>
                           </Text>
-                          <Text>Created by Bryan Jacquot on January 19, 2016</Text>
                         </Box>
                       </Box>
                     </RichPanel>
                       <RichPanel
-                        icon={<Bookmark color="accent-1" />}
+                        icon={<Bookmark color="#E2B3A9" />}
                         label="Highlights"
                       >
                         {highlightLoaded ? (
@@ -254,13 +255,12 @@ class Home extends Component {
                               horizontal: "small",
                               top: "small"
                             }}
-                            gap="medium"
+                            gap="small"
                             overflow="auto"
                             style={{ maxHeight: "400px" }}
                           >
-                            <Text color="dark-3">
-                              Below is the top message in
-                              <strong>#announcements</strong>.
+                            <Text color="light-3">
+
                             </Text>
                             <Text>
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -272,8 +272,8 @@ class Home extends Component {
                         )}
                       </RichPanel>
                     <RichPanel
-                      icon={<User color="accent-2" />}
-                      label="2,000 members"
+                      icon={<ContactInfo color="#E2B3A9" />}
+                      label="Contact Info"
                     >
                       <Box
                         pad={{
@@ -292,7 +292,7 @@ class Home extends Component {
             </Box>
           </Box>
           <Tabs className={"nav-tabs"} children={[<Clock type={"digital"}/>]} style={{width: "100%"}}>
-            <Tab title={<RichTabTitle label={"About"} icon={<Aggregate color={"dark-1"} size={"20px"}/>}/>} style={{marginTop: "20px", width: "105px" ,borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
+            <Tab title={<RichTabTitle label={"Home"} icon={<Home color={"dark-1"} size={"20px"}/>}/>} style={{marginTop: "20px", width: "105px" ,borderRight: "2px solid black", borderTop: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
               <Box pad="small" background={"light-3"}>One</Box>
             </Tab>
             <Tab title={<RichTabTitle icon={<Apps color={"dark-1"}size={"20px"}/>} label={"Apps"}/>} style={{marginTop: "20px", width: "105px" ,borderBottom: "2px solid black", borderLeft: "2px solid black", borderWidth: "4px", borderBottomWidth: "4px"}}>
@@ -322,4 +322,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default HomePage

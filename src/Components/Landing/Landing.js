@@ -4,7 +4,7 @@ import { Router, Link } from '@reach/router'
 import { NavLink } from 'react-router-dom'
 import {useRoutes, A} from 'hookrouter'
 import styled  from 'styled-components'
-import Home from '../Home/Home'
+import HomePage from '../Home/Home'
 // const EnterButton = () => {
 //
 //  return (
@@ -43,7 +43,7 @@ border: 3px solid red;
 `
 
 const routes = {
-"/home": () => <Home />
+"/home": () => <HomePage />
 }
 
 const NoPageFound = () => {
