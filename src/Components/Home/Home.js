@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import RichPanel from './SubComponents/RichPanel'
-import { theme } from './Styling/ConstantComponents'
+import { theme, richAccordionTheme, RichTabTitle, loading } from './Styling/ConstantComponents'
 import './Home.css'
 import {
 Grommet,
@@ -14,80 +14,24 @@ Tabs,
 Text,
 ThemeContext,
 Tab,
-InfiniteScroll,
 Clock } from 'grommet'
-import { Apps, Aggregate, StatusInfo, Github, Twitter, Linkedin, ContactInfo, Bookmark, Home, Brush, Notes, Music, FormAdd, FormSubtract } from 'grommet-icons'
+import { Apps, StatusInfo, Github, Twitter, Linkedin, ContactInfo, Bookmark, Home, Brush, Notes, Music} from 'grommet-icons'
 
 
 
-const RichTabTitle = ({ icon, label }) => (
-  <Box direction="row" align="center" gap="xsmall" margin="xsmall">
-    {icon}
-    <Text size="small">
-      <strong>{label}</strong>
-    </Text>
-  </Box>
-);
 
-const SubtractForm = () => (
-  <FormSubtract color={"#AACDD7"}/>
-);
 
-const AddForm = () => (
-<FormAdd color={"#E2B3A9"}/>
-)
-const richAccordionTheme = {
-  accordion: {
-    icons: {
-      collapse: SubtractForm,
-      expand: AddForm
-    }
-  }
-};
 
-const spinning = (
-  <svg
-    version="1.1"
-    viewBox="0 0 32 32"
-    width="32px"
-    height="32px"
-    fill="#333333"
-  >
-    <path
-      opacity=".25"
-      d="M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4"
-    />
-    <path d="M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z">
-      <animateTransform
-        attributeName="transform"
-        type="rotate"
-        from="0 16 16"
-        to="360 16 16"
-        dur="0.8s"
-        repeatCount="indefinite"
-      />
-    </path>
-  </svg>
-);
-
-const loading = (
-  <Box align="center" justify="center" style={{ height: "100px" }}>
-    {spinning}
-  </Box>
-);
 class HomePage extends Component {
  constructor(props) {
    super(props)
    this.state = {
-      position: 'left',
-      visible: false,
       highlightLoaded: false,
    }
  }
 
   render() {
   const { highlightLoaded } = this.state;
-      const BGG = "linear-gradient(170deg, #6F7983 -20%,  #0c1f36 -20%, #4d4d4d -20%, #0d0a18, #707479,  #637181, rgb(51, 40, 68))"
     return (
       <div>
         <Grommet theme={theme}>
