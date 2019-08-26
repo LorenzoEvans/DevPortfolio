@@ -17,14 +17,9 @@ Tab,
 Clock } from 'grommet'
 import { Apps, StatusInfo, Github, Twitter, Linkedin, ContactInfo, Bookmark, Home, Brush, Notes, Music} from 'grommet-icons'
 
-
-
-
-
-
 class HomePage extends Component {
  constructor(props) {
-   super(props)
+   super(props);
    this.state = {
       highlightLoaded: false,
    }
@@ -34,6 +29,7 @@ class HomePage extends Component {
   const { highlightLoaded } = this.state;
     return (
       <div>
+        {geometry}
         <Grommet theme={theme}>
         <Box elevation="40px" style={{display: "flex", flexDirection: "row", height: "100vh",}} >
           <Box
