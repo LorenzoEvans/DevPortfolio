@@ -7,6 +7,7 @@ Button,
 AccordionPanel,
 Heading,
 Accordion,
+Anchor,
 Grid,
 Tabs,
 Text,
@@ -14,7 +15,7 @@ ThemeContext,
 Tab,
 InfiniteScroll,
 Clock } from 'grommet'
-import { Apps, Aggregate, StatusInfo, ContactInfo, Bookmark, Home, Brush, Notes, Music, FormAdd, FormSubtract } from 'grommet-icons'
+import { Apps, Aggregate, StatusInfo, Github, Twitter, Linkedin, ContactInfo, Bookmark, Home, Brush, Notes, Music, FormAdd, FormSubtract } from 'grommet-icons'
 
 class RichPanel extends Component {
   state = {
@@ -64,11 +65,18 @@ const RichTabTitle = ({ icon, label }) => (
   </Box>
 );
 
+const SubtractForm = () => (
+  <FormSubtract color={"#AACDD7"}/>
+);
+
+const AddForm = () => (
+<FormAdd color={"#E2B3A9"}/>
+)
 const richAccordionTheme = {
   accordion: {
     icons: {
-      collapse: FormSubtract,
-      expand: FormAdd
+      collapse: SubtractForm,
+      expand: AddForm
     }
   }
 };
@@ -117,7 +125,7 @@ class HomePage extends Component {
 
 
   render() {
-  const { highlightLoaded } = this.state
+  const { highlightLoaded } = this.state;
       const theme = {
       global: {
       edgeSize: {
@@ -176,7 +184,7 @@ class HomePage extends Component {
         color: "#E2B3A9"
         }
       }
-      }
+      };
       const BGG = "linear-gradient(170deg, #6F7983 -20%,  #0c1f36 -20%, #4d4d4d -20%, #0d0a18, #707479,  #637181, rgb(51, 40, 68))"
     return (
       <div>
@@ -266,6 +274,22 @@ class HomePage extends Component {
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                               sed do eiusmod tempor incididunt ut labore et dolore
                             </Text>
+                            <Text>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                              sed do eiusmod tempor incididunt ut labore et dolore
+                            </Text>
+                            <Text>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                              sed do eiusmod tempor incididunt ut labore et dolore
+                            </Text>
+                            <Text>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                              sed do eiusmod tempor incididunt ut labore et dolore
+                            </Text>
+                            <Text>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                              sed do eiusmod tempor incididunt ut labore et dolore
+                            </Text>
                           </Box>
                         ) : (
                           loading
@@ -283,7 +307,15 @@ class HomePage extends Component {
                         }}
                         gap="medium"
                       >
-                        Yeah believe me, this channel has 2,000 members.
+                        <Box>
+                        <Anchor icon={<Github color={"#AACDD7"} href={""}/>}/>
+                         </Box>
+                        <Box>
+                          <Anchor icon={<Twitter color={"#AACDD7"} />}/>
+                        </Box>
+                        <Box>
+                          <Anchor icon={<Linkedin color={"#AACDD7"}/>}/>
+                        </Box>
                       </Box>
                     </RichPanel>
                   </Accordion>
