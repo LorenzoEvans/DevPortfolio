@@ -164,6 +164,12 @@ class HomePage extends Component {
         },
         paddingTop: "5px"
       },
+      anchor: {
+        textDecoration: "none",
+        hover: {
+        textDecoration: "none"
+        }
+      },
       tab: {
       background: "transparent",
         color: "#582C49",
@@ -192,10 +198,10 @@ class HomePage extends Component {
         <Box elevation="40px" style={{display: "flex", flexDirection: "row", height: "100vh",}} >
           <Box
           background={BGG}
-          style={{height: "100%", borderImage: "linear-gradient(to left, #582C49, #6F7983)"}}
+          style={{height: "100%", borderImage: "linear-gradient(to right, #582C49, #6F7983)"}}
           border={{color: "#cdcdcd",
           size: "large",
-          style: 'double'}}
+          style: 'inset'}}
           width={"400px"} overflow={"auto"}>
 
             <Box fill direction="row" color={"light-2"}>
@@ -307,15 +313,9 @@ class HomePage extends Component {
                         }}
                         gap="medium"
                       >
-                        <Box>
-                        <Anchor icon={<Github color={"#AACDD7"} href={""}/>}/>
-                         </Box>
-                        <Box>
-                          <Anchor icon={<Twitter color={"#AACDD7"} />}/>
-                        </Box>
-                        <Box>
-                          <Anchor icon={<Linkedin color={"#AACDD7"}/>}/>
-                        </Box>
+                        <Anchor reverse color={"#AEC6E2"} textDecoration={undefined} href="https://github.com/LorenzoEvans" label="Github" icon={<Github color={"#AACDD7"} />}/>
+                          <Anchor  label={"Twitter"} reverse color={"#AEC6E2"} icon={<Twitter color={"#AACDD7"} />}/>
+                          <Anchor label={"LinkedIn"} reverse color={"#AEC6E2"} icon={<Linkedin color={"#AACDD7"}/>}/>
                       </Box>
                     </RichPanel>
                   </Accordion>
