@@ -29,7 +29,6 @@ class HomePage extends Component {
   const { highlightLoaded } = this.state;
     return (
       <div>
-        {geometry}
         <Grommet theme={theme}>
         <Box elevation="40px" style={{display: "flex", flexDirection: "row", height: "100vh",}} >
           <Box
