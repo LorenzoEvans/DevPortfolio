@@ -34,7 +34,7 @@ const Content = () => {
             pad="small"
             background={"light-1"}
           >
-            One
+
 
           </Box>
         </Tab>

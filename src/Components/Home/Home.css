@@ -22,3 +22,8 @@
 border: 1px solid black ;
 }
 
+.particles {
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

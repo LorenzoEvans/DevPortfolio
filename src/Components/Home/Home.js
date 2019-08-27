@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import RichPanel from './SubComponents/RichPanel'
 import { theme, richAccordionTheme, RichTabTitle, loading } from './Styling/ConstantComponents'
 import './Home.css'
+import Particles from "react-particles-js";
 import {
 Grommet,
 Box,
@@ -158,6 +159,21 @@ class SideBar extends Component {
               </Box>
             </Box>
           </Box>
+          <Particles
+          className={"particles"}
+            params={{
+              particles: {
+                number: {
+                  value: 80,
+                  density: {
+                    enable: true,
+                    value_area: 800
+                  },
+                  size: {
+                  }
+                }
+              }
+            }} />
           <SiteNav/>
         </Box>
         </Grommet>
