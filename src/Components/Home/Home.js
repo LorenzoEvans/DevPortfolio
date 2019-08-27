@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import RichPanel from './SubComponents/RichPanel'
-import Animation from "./Animations/animations";
 import { theme, richAccordionTheme, RichTabTitle, loading } from './Styling/ConstantComponents'
 import './Home.css'
 import {
@@ -17,7 +16,7 @@ ThemeContext,
 Tab,
 Clock } from 'grommet'
 import { Apps, StatusInfo, Github, Twitter, Linkedin, ContactInfo, Bookmark, Home, Brush, Notes, Music} from 'grommet-icons'
-import NavBar from "./SubComponents/NavBar";
+import SiteNav from "./SubComponents/NavBar/NavBar";
 class SideBar extends Component {
  constructor(props) {
    super(props);
@@ -31,7 +30,8 @@ class SideBar extends Component {
     return (
       <div>
         <Grommet theme={theme}>
-        <Box elevation="40px" style={{display: "flex", flexDirection: "row", height: "100vh",}} >
+        <Box elevation="40px"
+          style={{display: "flex", flexDirection: "row", height: "100vh",}} >
           <Box
           className={"sidebar"}
           style={{height: "100%", borderImage: "black"}}
@@ -49,7 +49,6 @@ class SideBar extends Component {
                   pad={{ horizontal: "small" }}
                   style={{display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center"}}
                 >
-
                   <Heading level={3}
                   style={{fontFamily: "Bungee Shade",
                   color: "#837883", textShadow: "1.5px 1.5px 3.50px #74b5be",
@@ -159,7 +158,7 @@ class SideBar extends Component {
               </Box>
             </Box>
           </Box>
-          <NavBar/>
+          <SiteNav/>
         </Box>
         </Grommet>
       </div>
