@@ -30,10 +30,12 @@ const Content = () => {
               borderBottomWidth: "4px"
             }}>
           <Box
+           class={"background-home"}
             pad="small"
             background={"light-1"}
           >
             One
+
           </Box>
         </Tab>
         <Tab
