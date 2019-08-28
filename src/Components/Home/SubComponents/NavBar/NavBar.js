@@ -11,7 +11,7 @@ anime({
 })
 const Content = () => {
   return (
-    <div style={{width: "100%", border: "2px solid red"}}>
+    <div style={{width: "100%"}}>
       <Tabs
         className={"nav-tabs"}
         children={[<Clock type={"digital"}/>]}>
@@ -19,13 +19,14 @@ const Content = () => {
           title={<RichTabTitle
           label={"Home"} icon={<Home
           color={"dark-1"}
+          bottom={"white"}
           size={"20px"}/>}/>}
           style={
             {
               marginTop: "20px",
               width: "105px",
-              borderRight: "2px solid black",
-              borderTop: "2px solid black",
+              borderRight: "2px solid white",
+              borderTop: "2px solid white",
               borderWidth: "4px",
               borderBottomWidth: "4px"
             }}>

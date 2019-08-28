@@ -51,7 +51,12 @@ const theme = {
     active:{
       color: "#E2B3A9",
     },
-    border: undefined,
+    border: {
+    color: "white",
+    active: {
+        color: "light-4"
+      }
+    },
     pad: {
       bottom: "light-2",
       horizontal: "small",

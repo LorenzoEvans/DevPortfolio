@@ -1,23 +1,36 @@
 import React, { Component } from 'react'
 import RichPanel from './SubComponents/RichPanel'
-import { theme, richAccordionTheme, RichTabTitle, loading } from './Styling/ConstantComponents'
+import SiteNav from "./SubComponents/NavBar/NavBar";
 import './Home.css'
-import Particles from "react-particles-js";
+import { theme, richAccordionTheme, loading } from './Styling/ConstantComponents'
 import {
 Grommet,
-Box,
-Button,
-Accordion,
-Anchor,
-Heading,
-Grid,
-Tabs,
-Text,
-ThemeContext,
-Tab,
-Clock } from 'grommet'
-import { Apps, StatusInfo, Github, Twitter, Linkedin, ContactInfo, Bookmark, Home, Brush, Notes, Music} from 'grommet-icons'
-import SiteNav from "./SubComponents/NavBar/NavBar";
+  Box,
+  Button,
+  Accordion,
+  Anchor,
+  Heading,
+  Grid,
+  Tabs,
+  Text,
+  ThemeContext,
+  Tab,
+  Clock
+} from 'grommet'
+
+import {
+  StatusInfo,
+  Github,
+  Twitter,
+  Linkedin,
+  ContactInfo,
+  Bookmark,
+  Home,
+  Brush,
+  Notes,
+  Music
+} from 'grommet-icons'
+
 class SideBar extends Component {
  constructor(props) {
    super(props);
@@ -34,12 +47,13 @@ class SideBar extends Component {
         <Box elevation="40px"
           style={{display: "flex", flexDirection: "row", height: "100vh",}} >
           <Box
-          className={"sidebar"}
-          style={{height: "100%", borderImage: "black"}}
-          border={{color: "#cdcdcd",
-          size: "medium",
+            className={"sidebar"}
+            style={{height: "100%", borderImage: "black"}}
+            border={{color: "#cdcdcd",
+            size: "medium",
           }}
-          width={"350px"} overflow={"auto"}>
+            width={"350px"}
+            overflow={"auto"}>
 
             <Box fill direction="row" color={"light-2"}>
               <Box basis="medium" border={undefined} >
@@ -159,21 +173,6 @@ class SideBar extends Component {
               </Box>
             </Box>
           </Box>
-          <Particles
-          className={"particles"}
-            params={{
-              particles: {
-                number: {
-                  value: 80,
-                  density: {
-                    enable: true,
-                    value_area: 800
-                  },
-                  size: {
-                  }
-                }
-              }
-            }} />
           <SiteNav/>
         </Box>
         </Grommet>
