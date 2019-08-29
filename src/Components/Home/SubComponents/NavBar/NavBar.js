@@ -25,21 +25,15 @@ const Content = () => {
           style={
             {
               marginTop: "20px",
+              marginBottom: "5px",
               width: "105px",
               borderRight: "2px solid white",
               borderTop: "2px solid white",
               borderRadius: "0 5% 0 0",
-              borderWidth: "4px",
-              borderBottomWidth: "4px"
+              borderWidth: "1px",
+              borderBottomWidth: "1px"
             }}>
-          <Box
-           class={"background-home"}
-            pad="small"
-            background={"light-4"}
-          >
-
-
-          </Box>
+          <Box pad="small">One</Box>
         </Tab>
         <Tab
         title={
@@ -48,29 +42,41 @@ const Content = () => {
               style={{
               marginTop: "20px",
               width: "105px" ,
-              borderBottom: "2px solid white",
-              borderLeft: "2px solid white",
-              borderWidth: "4px",
-              borderBottomWidth: "4px",
+              marginBottom: "5px",
+              borderBottom: "0px solid white",
+              borderLeft: "0px solid white",
+              borderWidth: "1px",
+              borderBottomWidth: "1px",
               borderRadius: "0 0 0 5%",
               }}>
-          <Box
-            direction="row"
-            border={{ color: 'brand', size: 'small' }}
-            pad="medium"
-            style={{border: "2px solid green"}}
-          >
-            <Box pad="small" background="dark-3" />
-            <Box pad="medium" background="light-3" />
-          </Box>
+          <Box pad="small">Two</Box>
         </Tab>
-        <Tab title={<RichTabTitle label={"Art"} icon={<Brush color={"light-1"} size={"20px"}/>}/>} style={{borderRadius: "0 5% 0 0", marginTop: "20px", width: "105px" , borderRight: "2px solid white", borderTop: "2px solid white", borderWidth: "4px", borderBottomWidth: "4px"}}>
-          <Box pad="small"></Box>
+        <Tab title={<RichTabTitle label={"Art"} icon={<Brush color={"light-1"} size={"20px"}/>}/>}
+          style={{
+            borderRadius: "0 5% 0 0",
+            marginTop: "20px",
+            width: "105px",
+            marginBottom: "5px",
+            borderRight: "0px solid white", borderTop: "0px solid white", borderWidth: "1px", borderBottomWidth: "1px"}}>
+          <Box pad="small">Three</Box>
         </Tab>
-        <Tab title={<RichTabTitle label={"Writing"} icon={<Notes color={"light-1"} size={"20px"}/>}/>}  style={{borderRadius: "5% 5% 5% 5%", marginTop: "20px", width: "105px" ,borderLeft: "2px solid white", borderTop: "2px solid white", borderWidth: "4px", borderBottomWidth: "4px"}}>
+        <Tab title={<RichTabTitle label={"Writing"} icon={<Notes color={"light-1"} size={"20px"}/>}/>}
+          style={{
+            borderRadius: "5% 0 0 0",
+            marginTop: "20px",
+            width: "105px",
+            marginBottom: "5px",
+            borderLeft: "0px solid white", borderTop: "0px solid white", borderWidth: "1px", borderBottomWidth: "1px"}}>
           <Box pad="small">Four</Box>
         </Tab>
-        <Tab title={<RichTabTitle label={"Music"} icon={<Music color={"light-1"} size={"20px"}/>}/>}  style={{borderRadius: "5% 5% 5% 5%", marginTop: "20px", width: "105px" ,borderRight: "2px solid white", borderBottom: "2px solid white", borderWidth: "4px", borderBottomWidth: "4px"}}>
+        <Tab title={<RichTabTitle label={"Music"} icon={<Music color={"light-1"} size={"20px"}/>}/>}
+          style={{
+            borderRadius: "0 0 5% 0",
+            marginTop: "20px",
+            width: "105px",
+            marginBottom: "5px",
+            borderRight: "0px solid white",
+            borderBottom: "0px solid white", borderWidth: "1px", borderBottomWidth: "1px"}}>
           <Box pad="small">Five</Box>
         </Tab>
       </Tabs>
