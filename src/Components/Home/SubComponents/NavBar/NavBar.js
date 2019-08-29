@@ -3,12 +3,7 @@ import './NavBar.css'
 import {Box, Clock, Tab, Tabs} from "grommet/es6";
 import {RichTabTitle} from "../../Styling/ConstantComponents";
 import {Apps, Brush, Home, Music, Notes} from "grommet-icons/es6";
-import anime from 'animejs'
 
-anime({
-  targets: 'core-background',
-
-})
 const Content = () => {
   return (
     <div style={{width: "100%"}}>
@@ -31,9 +26,9 @@ const Content = () => {
               borderTop: "2px solid white",
               borderRadius: "0 5% 0 0",
               borderWidth: "1px",
-              borderBottomWidth: "1px"
+              borderBottomWidth: "1px",
             }}>
-          <Box pad="small">One</Box>
+          <Box className={"dummy-test"} pad="small" style={{height: "90.80vh"}}>One</Box>
         </Tab>
         <Tab
         title={

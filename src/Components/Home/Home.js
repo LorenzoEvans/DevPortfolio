@@ -38,6 +38,17 @@ class SideBar extends Component {
       highlightLoaded: false,
    }
  }
+componentDidMount() {
+  window.VANTA.TOPOLOGY({
+    el: ".dummy-test",
+    color: 0xffffff,
+    backgroundColor: 0x0,
+    points: 5,
+    maxDistance: 30,
+    spacing: 20,
+    showDots: false
+  });
+}
 
   render() {
   const { highlightLoaded } = this.state;
