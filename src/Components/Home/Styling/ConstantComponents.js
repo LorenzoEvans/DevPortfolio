@@ -34,9 +34,8 @@ const theme = {
     gap: "110px",
     justify: "start",
     width: "100%",
-    header: {
-      background: undefined,
-    },
+    background: "black",
+    elevation: "10px",
     paddingTop: "5px"
   },
   anchor: {
@@ -46,16 +45,16 @@ const theme = {
     }
   },
   tab: {
-    background: "transparent",
-    color: "#582C49",
+    background: "black",
     active:{
-      color: "#E2B3A9",
+      color: "light-4",
     },
     border: {
-    color: "white",
+    color: "dark-1",
     active: {
-        color: "light-4"
-      }
+        color: "#d6b3e4"
+      },
+    radius: "5px 5px 5px 5px"
     },
     pad: {
       bottom: "light-2",
@@ -63,11 +62,11 @@ const theme = {
       borderBottomStyle: {
         width: "20px"
       },
-      // border: undefined
+      border: undefined
     },
     hover: {
       border: "light-2",
-      color: "#E2B3A9"
+      color: "#BEA49F"
     }
   }
 };

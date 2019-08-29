@@ -8,9 +8,7 @@ import { Grommet } from "grommet";
 
 ReactDOM.render(
   <BrowserRouter>
-    <Grommet>
       <App />
-    </Grommet>
   </BrowserRouter>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
