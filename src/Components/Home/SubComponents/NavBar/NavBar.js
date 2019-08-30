@@ -24,11 +24,15 @@ const Content = () => {
               width: "105px",
               borderRight: "2px solid white",
               borderTop: "2px solid white",
-              borderRadius: "0 5% 0 0",
+              borderLeft: "2px solid white",
+              borderBottom: "2px solid black",
+              borderRadius: "5% 5% 5% 5%",
               borderWidth: "1px",
+              borderTopWidth: "1px",
+              borderLeftWidth: "1px",
               borderBottomWidth: "1px",
             }}>
-          <Box className={"dummy-test"} pad="small" style={{height: "90.80vh"}}>One</Box>
+          <Box pad="small" style={{height: "90.80vh"}}>Zero</Box>
         </Tab>
         <Tab
         title={
@@ -44,7 +48,7 @@ const Content = () => {
               borderBottomWidth: "1px",
               borderRadius: "0 0 0 5%",
               }}>
-          <Box pad="small">Two</Box>
+          <Box pad="small" style={{height: "90.80vh"}}>One</Box>
         </Tab>
         <Tab title={<RichTabTitle label={"Art"} icon={<Brush color={"light-1"} size={"20px"}/>}/>}
           style={{
@@ -53,7 +57,7 @@ const Content = () => {
             width: "105px",
             marginBottom: "5px",
             borderRight: "0px solid white", borderTop: "0px solid white", borderWidth: "1px", borderBottomWidth: "1px"}}>
-          <Box pad="small">Three</Box>
+          <Box pad="small" style={{height: "90.80vh"}}>Two</Box>
         </Tab>
         <Tab title={<RichTabTitle label={"Writing"} icon={<Notes color={"light-1"} size={"20px"}/>}/>}
           style={{
@@ -61,8 +65,8 @@ const Content = () => {
             marginTop: "20px",
             width: "105px",
             marginBottom: "5px",
-            borderLeft: "0px solid white", borderTop: "0px solid white", borderWidth: "1px", borderBottomWidth: "1px"}}>
-          <Box pad="small">Four</Box>
+            borderLeft: "0px solid white", borderTop: "0px solid white", borderWidth: "1px", borderBottomWidth: "1px" }}>
+          <Box pad="small" style={{height: "90.80vh"}}>Three</Box>
         </Tab>
         <Tab title={<RichTabTitle label={"Music"} icon={<Music color={"light-1"} size={"20px"}/>}/>}
           style={{
@@ -72,7 +76,7 @@ const Content = () => {
             marginBottom: "5px",
             borderRight: "0px solid white",
             borderBottom: "0px solid white", borderWidth: "1px", borderBottomWidth: "1px"}}>
-          <Box pad="small">Five</Box>
+          <Box pad="small" style={{height: "90.80vh"}}>Four</Box>
         </Tab>
       </Tabs>
     </div>

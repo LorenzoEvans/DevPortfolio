@@ -4,7 +4,8 @@ import './App.css';
 import { Route, Link, Switch } from 'react-router-dom'
 import Landing from './Components/Landing/Landing'
 import HomePage from './Components/Home/Home'
-
+import {Grommet} from 'grommet'
+import {theme} from './Components/Home/Styling/ConstantComponents'
 
 
 class App extends React.Component {
@@ -18,23 +19,26 @@ class App extends React.Component {
 
  }
 
+
  handleState = () => {
   this.setState({
    onLanding: !this.onLanding
   })
- }
+ };
 
  render () {
 
   const routes = {
    "/home": () => <HomePage />
-  }
+  };
   return (
    <>
-    <Switch>
-     <Route exact path="/" component={Landing}/>
-     <Route exact path="/home" component={HomePage}/>
-    </Switch>
+    <Grommet theme={theme}>
+     <Switch>
+      <Route exact path="/" component={Landing}/>
+      <Route exact path="/home" component={HomePage}/>
+     </Switch>
+    </Grommet>
    </>
   );
  }

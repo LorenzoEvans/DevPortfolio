@@ -22,11 +22,12 @@ function Landing()  {
 
     return (
      <div className="background">
-       <div className="title" >La Maison De #0xLE</div>
-       <NavLink className={"classRandom"} exact to="/home" activeStyle={{textDecoration: 'none'}}>
+       <span className={"title"} > La Maison De #0xLE
+       </span>
+       <NavLink className={"enter-button"} exact to="/home" activeStyle={{textDecoration: 'none'}}>
        Enter
        </NavLink>
-       <div className="title2" >La Maison De #0xLE</div>
+       <span className={"title2"} >La Maison De #0xLE</span>
      </div>
     )
 }

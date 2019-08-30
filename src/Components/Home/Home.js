@@ -38,48 +38,39 @@ class SideBar extends Component {
       highlightLoaded: false,
    }
  }
-componentDidMount() {
-  window.VANTA.TOPOLOGY({
-    el: ".dummy-test",
-    color: 0xffffff,
-    backgroundColor: 0x0,
-    points: 5,
-    maxDistance: 30,
-    spacing: 20,
-    showDots: false
-  });
-}
 
   render() {
   const { highlightLoaded } = this.state;
     return (
-      <div>
-        <Grommet theme={theme}>
+      <div className={"dummy-test-2"}>
         <Box elevation="40px"
           style={{display: "flex", flexDirection: "row", height: "100vh",}} >
           <Box
             className={"sidebar"}
-            style={{height: "100%", borderImage: "black"}}
-            border={{color: "#cdcdcd",
-            size: "medium",
-          }}
+            style={{height: "100%", borderImage: "black", background: "black", borderRight: "1px solid white"}}
             width={"350px"}
             overflow={"auto"}>
 
             <Box fill direction="row" color={"light-2"}>
-              <Box basis="medium" border={undefined} >
+              <Box basis="large">
                 <Box
-                  border={"bottom"}
                   background={"transparent"}
                   as="header"
+                  height={"200px"}
                   pad={{ horizontal: "small" }}
-                  style={{display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center"}}
+                  style={{
+                  display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center",
+                  borderBottom: "1px solid white", borderBottomWidth: "1px solid white",
+                  }}
                 >
                   <Heading level={3}
                   style={{fontFamily: "Bungee Shade",
-                  color: "#837883", textShadow: "1.5px 1.5px 3.50px #74b5be",
+                  borderBottom: "1px solid black",
+                  color: "#dfe1dc", textShadow: "25px 20.5px 0.50px #BEA49F",
                   marginBottom: "30px"}}>
-                    <strong>#0xLE</strong>
+                    <strong style={{fontFamily: "Bungee Shade",
+                      color: "#cdcdcd", textShadow: "35px 35.5px 5px #BEA49F",
+                      marginBottom: "30px"}}>#0xLE</strong>
                   </Heading>
                   <Clock type={"digital"} size={"small"} style={{color: "#BEA49F"}}/>
                 </Box>
@@ -95,7 +86,7 @@ componentDidMount() {
                       }
                     }}
                   >
-                    <RichPanel icon={<StatusInfo color="#E2B3A9" />} label="About">
+                    <RichPanel icon={<StatusInfo color="#BEA49F" />} label="About">
                       <Box
                         pad={{
                           bottom: "small",
@@ -103,12 +94,16 @@ componentDidMount() {
                           top: "small",
                         }}
                         gap="xsmall"
+                        style={{borderTop: "1px solid white", borderTopWidth: "1px solid white"}}
                       >
-                        <Box gap="xsmall">
+                        <Box
+                          gap="xsmall"
+
+                        >
                           <Text color="light-3">
                             <strong>Purpose</strong>
                           </Text>
-                          <Text>
+                          <Text color="light-3">
                             Used for general announcements like new releases,
                             trainings...
                           </Text>
@@ -132,28 +127,26 @@ componentDidMount() {
                             }}
                             gap="small"
                             overflow="auto"
-                            style={{ maxHeight: "400px" }}
+                            style={{ maxHeight: "400px", borderTop: "1px solid white", borderTopWidth: "1px solid white" }}
                           >
-                            <Text color="light-3">
 
-                            </Text>
-                            <Text>
+                            <Text  color="light-3" size="small">
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                               sed do eiusmod tempor incididunt ut labore et dolore
                             </Text>
-                            <Text>
+                            <Text color="light-3" size="small">
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                               sed do eiusmod tempor incididunt ut labore et dolore
                             </Text>
-                            <Text>
+                            <Text color="light-3" size="small">
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                               sed do eiusmod tempor incididunt ut labore et dolore
                             </Text>
-                            <Text>
+                            <Text color="light-3" size="small">
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                               sed do eiusmod tempor incididunt ut labore et dolore
                             </Text>
-                            <Text>
+                            <Text color="light-3" size="small">
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                               sed do eiusmod tempor incididunt ut labore et dolore
                             </Text>
@@ -173,6 +166,7 @@ componentDidMount() {
                           top: "small"
                         }}
                         gap="medium"
+                        style={{borderTop: "1px solid white", borderTopWidth: "1px solid white"}}
                       >
                         <Anchor reverse color={"#AEC6E2"} textDecoration={undefined} href="https://github.com/LorenzoEvans" label="Github" icon={<Github color={"#AACDD7"} />}/>
                           <Anchor  label={"Twitter"} reverse color={"#AEC6E2"} icon={<Twitter color={"#AACDD7"} />}/>
@@ -186,7 +180,6 @@ componentDidMount() {
           </Box>
           <SiteNav/>
         </Box>
-        </Grommet>
       </div>
     );
   }

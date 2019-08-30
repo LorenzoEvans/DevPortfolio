@@ -58,9 +58,9 @@ const theme = {
 };
 
 const RichTabTitle = ({ icon, label }) => (
-  <Box direction="row" align="center" gap="xsmall" margin="xsmall">
+  <Box direction="row" align="center" gap="small" margin="small">
     {icon}
-    <Text size="small">
+    <Text size="xsmall">
       <strong>{label}</strong>
     </Text>
   </Box>
