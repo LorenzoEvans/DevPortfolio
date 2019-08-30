@@ -42,7 +42,7 @@ class SideBar extends Component {
   render() {
   const { highlightLoaded } = this.state;
     return (
-      <div className={"dummy-test-2"}>
+      <div className={"gradient-bg"}>
         <Box elevation="40px"
           style={{display: "flex", flexDirection: "row", height: "100vh",}} >
           <Box
