@@ -20,7 +20,6 @@ const theme = {
     gap: "110px",
     justify: "start",
     width: "100%",
-    background: "black",
     elevation: "10px",
     paddingTop: "5px"
   },
@@ -31,7 +30,6 @@ const theme = {
     }
   },
   tab: {
-    background: "black",
     active:{
       color: "light-4",
     },

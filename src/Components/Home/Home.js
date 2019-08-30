@@ -47,7 +47,7 @@ class SideBar extends Component {
           style={{display: "flex", flexDirection: "row", height: "100vh",}} >
           <Box
             className={"sidebar"}
-            style={{height: "100%", borderImage: "black", background: "black", borderRight: "1px solid white"}}
+            style={{height: "100%", borderImage: "black", border: "2px solid white"}}
             width={"350px"}
             overflow={"auto"}>
 
@@ -66,13 +66,17 @@ class SideBar extends Component {
                   <Heading level={3}
                   style={{fontFamily: "Bungee Shade",
                   borderBottom: "1px solid black",
-                  color: "#dfe1dc", textShadow: "25px 20.5px 0.50px #BEA49F",
+                  paddingBottom: "2px",
+                  color: "#dfe1dc", textShadow: "-25px -20.5px 0.50px #BEA49F",
                   marginBottom: "30px"}}>
-                    <strong style={{fontFamily: "Bungee Shade",
-                      color: "#cdcdcd", textShadow: "35px 35.5px 5px #BEA49F",
-                      marginBottom: "30px"}}>#0xLE</strong>
+                    <strong
+                    style={{fontFamily: "Bungee Shade",
+                      color: "#cdcdcd", textShadow: "0px 35.5px 4.9px #CDBFC1",
+                      marginBottom: "30px"}}
+
+                      >#0xLE</strong>
                   </Heading>
-                  <Clock type={"digital"} size={"small"} style={{color: "#BEA49F"}}/>
+                  <Clock type={"digital"} size={"medium"} style={{color: "#BEA49F", fontStyle: "bold"}}/>
                 </Box>
                 <ThemeContext.Extend value={richAccordionTheme}>
                   <Accordion
