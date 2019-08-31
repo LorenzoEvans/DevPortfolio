@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import RichPanel from './SubComponents/RichPanel'
-import SiteNav from "./SubComponents/NavBar/NavBar";
+import Content from "./SubComponents/NavBar/NavBar";
 import './Home.css'
 import { theme, richAccordionTheme, loading } from './Styling/ConstantComponents'
 import {
@@ -47,20 +47,19 @@ class SideBar extends Component {
           style={{display: "flex", flexDirection: "row", height: "100vh",}} >
           <Box
             className={"sidebar"}
-            style={{height: "100%", borderImage: "black", border: "2px solid white"}}
+            style={{height: "100%", borderImage: "black", border: "2px solid gainsboro", borderBottom: "none"}}
             width={"350px"}
             overflow={"auto"}>
 
-            <Box fill direction="row" color={"light-2"}>
-              <Box basis="large">
+            <Box fill direction="row" color={"light-2"} style={{height: "100vh"}}>
+              <Box basis="large" style={{height: "100vh"}}>
                 <Box
                   background={"transparent"}
                   as="header"
                   height={"200px"}
-                  pad={{ horizontal: "small" }}
+                  pad={{ horizontal: "xsmall" }}
                   style={{
                   display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center",
-                  borderBottom: "1px solid white", borderBottomWidth: "1px solid white",
                   }}
                 >
                   <Heading level={3}
@@ -76,7 +75,7 @@ class SideBar extends Component {
 
                       >#0xLE</strong>
                   </Heading>
-                  <Clock type={"digital"} size={"medium"} style={{color: "#BEA49F", fontStyle: "bold"}}/>
+                  <Clock type={"digital"} size={"medium"} style={{color: "#d5c9c8", fontStyle: "bold"}}/>
                 </Box>
                 <ThemeContext.Extend value={richAccordionTheme}>
                   <Accordion
@@ -90,32 +89,30 @@ class SideBar extends Component {
                       }
                     }}
                   >
-                    <RichPanel icon={<StatusInfo color="#BEA49F" />} label="About">
+                    <RichPanel icon={<StatusInfo color="#BEA49F" />} label="About" >
                       <Box
                         pad={{
-                          bottom: "small",
-                          horizontal: "small",
-                          top: "small",
+                        top: "medium",
+                        horizontal: "medium",
+                        bottom: "medium"
                         }}
                         gap="xsmall"
-                        style={{borderTop: "1px solid white", borderTopWidth: "1px solid white"}}
+
                       >
                         <Box
                           gap="xsmall"
 
                         >
-                          <Text color="light-3">
-                            <strong>Purpose</strong>
-                          </Text>
-                          <Text color="light-3">
-                            Used for general announcements like new releases,
-                            trainings...
-                          </Text>
-                        </Box>
-                        <Box gap="xsmall">
-                          <Text color="light-3">
+                          <Text color="light-3" size={"small"}>
+                            A lifelong musician turned programmer.
+                            I find that software is a unique medium for displaying creativity,
+                            learning new ways of thinking, and seeing the world,
+                            which has lead to a mostly healthy obsession since discovering it.
+                            I will be cataloguing my experiences with it here, and hereby declare you
+                            welcome to join me on my journey.
                           </Text>
                         </Box>
+
                       </Box>
                     </RichPanel>
                       <RichPanel
@@ -125,13 +122,12 @@ class SideBar extends Component {
                         {highlightLoaded ? (
                           <Box
                             pad={{
-                              bottom: "small",
-                              horizontal: "small",
-                              top: "small"
+                              top: "medium",
+                              horizontal: "medium",
+                              bottom: "medium"
                             }}
                             gap="small"
                             overflow="auto"
-                            style={{ maxHeight: "400px", borderTop: "1px solid white", borderTopWidth: "1px solid white" }}
                           >
 
                             <Text  color="light-3" size="small">
@@ -165,12 +161,11 @@ class SideBar extends Component {
                     >
                       <Box
                         pad={{
-                          bottom: "small",
-                          horizontal: "small",
-                          top: "small"
+                          top: "medium",
+                          horizontal: "medium",
+                          bottom: "medium"
                         }}
                         gap="medium"
-                        style={{borderTop: "1px solid white", borderTopWidth: "1px solid white"}}
                       >
                         <Anchor reverse color={"#AEC6E2"} textDecoration={undefined} href="https://github.com/LorenzoEvans" label="Github" icon={<Github color={"#AACDD7"} />}/>
                           <Anchor  label={"Twitter"} reverse color={"#AEC6E2"} icon={<Twitter color={"#AACDD7"} />}/>
@@ -182,7 +177,7 @@ class SideBar extends Component {
               </Box>
             </Box>
           </Box>
-          <SiteNav/>
+          <Content/>
         </Box>
       </div>
     );

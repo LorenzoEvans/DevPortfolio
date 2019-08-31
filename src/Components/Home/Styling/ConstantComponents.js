@@ -44,7 +44,7 @@ const theme = {
       bottom: "light-2",
       horizontal: "small",
       borderBottomStyle: {
-        width: "20px"
+      width: "20px"
       },
       border: undefined
     },
@@ -77,6 +77,10 @@ const richAccordionTheme = {
     icons: {
       collapse: SubtractForm,
       expand: AddForm
+    },
+    border: {
+    color: "none",
+    side: "none"
     }
   }
 };
