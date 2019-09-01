@@ -1,36 +1,12 @@
 import React, {Component} from 'react';
 import './NavBar.css'
-import {Box, Tab, Tabs, Grid, Distribution, Paragraph, InfiniteScroll, Text} from "grommet/es6";
+import {Box, Tab, Tabs, Heading, InfiniteScroll, Text} from "grommet/es6";
 import {RichTabTitle} from "../../Styling/ConstantComponents";
-import {Apps, Brush, Home, Notes} from "grommet-icons/es6";
-import { about } from './AboutContent'
 
-const artArr = ['hi', 'how are you', 'welcome'];
-
-const allItems = Array(2000)
-  .fill(1)
-  .map((_, i) => `item ${i + 1}`);
-
-const SimpleInfiniteScroll = props => (
-  <Box height="90vh" overflow="auto" width={"50%"}>
-    <InfiniteScroll items={allItems} {...props}>
-      {item => (
-        <Box
-          key={item}
-          pad="medium"
-          border={{ side: "bottom" }}
-          align="center"
-        >
-          <Text>{item}</Text>
-        </Box>
-      )}
-    </InfiniteScroll>
-  </Box>
-);
 
 const Content = () => {
   return (
-    <div style={{width: "100%", height: "100%"}}>
+    <Box style={{width: "100%", height: "100vh"}} overflow={"auto"}>
       <Tabs
         className={"nav-tabs"}
         >
@@ -38,6 +14,7 @@ const Content = () => {
           title={<RichTabTitle
           label={"Home"} icon={<Home
           color={"light-1"}
+          overflow={"auto"}
           bottom={"white"}
           size={"2rem"}/>}
           />}
@@ -51,118 +28,176 @@ const Content = () => {
               borderRadius: "0% 5% 0% 0%",
               borderWidth: "2px",
               borderTopWidth: "2px",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "row-wrap",
-              justifyContent: "space-evenly"
             }}>
-            <Box
-            style={{
-            height: "50%", border: "1.75px solid black", width: "50%",
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "row-wrap",
-            justifyContent: "space-evenly"
-            }}
-            elevation={"small"}
-            animation={"zoomIn"}
-             >
-              <Box animation={"fadeIn"}
-              margin={"small"}
-              pad={"small"}
-              width={"33%"}
-              overflow="scroll"
-                style={{border: "2px solid gainsboro"}}
-              >
-                <h2>
-                I like this!
-                </h2>
-                <Text margin="small" width={"33%"}>
-                  Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut
-                  labore et dolore magna aliqua.
-                  Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut
-                  labore et dolore magna aliqua.
-                  Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut
-                  labore et dolore magna aliqua.
-                  Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut
-                  labore et dolore magna aliqua.
-                  Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut
-                  labore et dolore magna aliqua.
-                  Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut
-                  labore et dolore magna aliqua.
-                  Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut
-                  labore et dolore magna aliqua.
-                  Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut
-                  labore et dolore magna aliqua.
-
-                </Text>
-              </Box>
-              <Box animation={"fadeIn"}
-                   pad={"small"}
-                   width={"67%"}
-                   margin={"small"}
-                   style={{border: "2px solid gainsboro"}}
-              >
-
-                <h2>
-                I'd love to work on these!
-                </h2>
-                <Text margin="small">
-                  Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut
-                  labore et dolore magna aliqua.
-                </Text>
-              </Box>
-
-            </Box>
+          <Box
+            overflow="auto"
+            height={"100vh"}
+            style={{display: "flex", flexDirection: "row", flexWrap: "wrap"}}
+          >
           <Box
             pad={{
-              top: "medium",
-              horizontal: "medium",
-              bottom: "medium"
+              top: "small",
+              horizontal: "small",
+              bottom: "small"
             }}
+            style={{border: "1.5px solid green"}}
+            height={"medium"}
+            width={"50%"}
+            basis={"1/2"}
+            margin={"small"}
+            elevation={"large"}
             gap="small"
             overflow="auto"
-            height={"50px"}
+            animation={"fadeIn"}
+            background={undefined}
           >
-
-            <Text  color="light-3" size="small">
+            <Box border={"dark-5"} height={"small"} overflow={"auto"} margin={"small"} alignContent={"center"}>
+              <Heading>I like this</Heading>
+            <Text color="black" size="small" margin={"small"}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore
             </Text>
-            <Text color="light-3" size="small">
+            </Box>
+            <Box border={"dark-2"} overflow={"auto"}>
+              <Text  color="dark-4" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+            <Box border={"dark-2"} overflow={"auto"}>
+              <Text  color="dark-4" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+            <Box border={"dark-2"} overflow={"auto"}>
+              <Text  color="dark-4" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+            <Box border={"dark-2"} overflow={"auto"}>
+              <Text  color="dark-4" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+            <Box border={"dark-2"} overflow={"auto"}>
+              <Text  color="dark-4" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+            <Box border={"dark-2"} overflow={"auto"}>
+              <Text  color="dark-4" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+            <Box border={"dark-2"} overflow={"auto"}>
+              <Text  color="dark-4" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+            <Box border={"dark-2"} overflow={"auto"}>
+            <Text color="dark-4" size="small">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore
             </Text>
-            <Text color="light-3" size="small">
+            </Box>
+            <Box>
+            <Text color="dark-4" size="small">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore
             </Text>
-            <Text color="light-3" size="small">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore
-            </Text>
-            <Text color="light-3" size="small">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore
-            </Text>
+            </Box>
+          </Box>
+          <Box
+            pad={{
+              top: "small",
+              horizontal: "small",
+              bottom: "small"
+            }}
+            height={"medium"}
+            margin={"small"}
+            // width={"31%"}
+            basis={"1/3"}
+            elevation={"large"}
+            gap="small"
+            overflow="auto"
+            background={undefined}
+            animation={"fadeIn"}
+            style={{border: "1.5px solid black"}}
+          >
+            <Box border={"dark-5"} height={"small"} overflow={"auto"}>
+              <h3>I like this</h3>
+              <Text color="black" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+            <Box border={"dark-2"} overflow={"auto"}>
+              <Text  color="dark-4" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+            <Box border={"dark-2"} overflow={"auto"}>
+              <Text color="dark-4" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+            <Box>
+              <Text color="dark-4" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+          </Box><Box
+            pad={{
+              top: "small",
+              horizontal: "small",
+              bottom: "small"
+            }}
+            height={"small"}
+            margin={"small"}
+            // width={"medium"}
+            basis={"3/4"}
+            elevation={"large"}
+            gap="small"
+            overflow="auto"
+            animation={"fadeIn"}
+            background={undefined}
+            style={{border: "1.5px solid yellow"}}
+          >
+            <Box border={"dark-5"} height={"small"} overflow={"auto"}>
+              <h3>I like this</h3>
+              <Text color="black" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+            <Box border={"dark-2"} overflow={"auto"}>
+              <Text  color="dark-4" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+            <Box border={"dark-2"} overflow={"auto"}>
+              <Text color="dark-4" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+            <Box>
+              <Text color="dark-4" size="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+              </Text>
+            </Box>
+          </Box>
           </Box>
         </Tab>
         <Tab
@@ -205,7 +240,7 @@ const Content = () => {
 
         </Tab>
       </Tabs>
-    </div>
+    </Box>
   );
 };
 
