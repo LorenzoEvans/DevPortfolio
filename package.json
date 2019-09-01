@@ -5,6 +5,7 @@
   "dependencies": {
     "@reach/router": "^1.2.1",
     "animejs": "^3.1.0",
+    "arwes": "^1.0.0-alpha.5",
     "grommet": "^2.7.6",
     "grommet-icons": "^4.3.0",
     "hookrouter": "^1.2.3",

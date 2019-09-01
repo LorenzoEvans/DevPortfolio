@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import './NavBar.css'
-import {Box, Tab, Tabs, Heading, InfiniteScroll, Text} from "grommet/es6";
+import {Box, Tab, Tabs, Heading, InfiniteScroll, Text, Carousel, Image} from "grommet/es6";
 import {RichTabTitle} from "../../Styling/ConstantComponents";
 import {Apps, Brush, Home, Notes} from "grommet-icons/es6";
 import { about } from './AboutContent'
+import {Table, TableBody, TableCell, TableHeader, TableRow} from "grommet";
 
 
 const Content = () => {
@@ -34,9 +35,17 @@ const Content = () => {
           <Box
             overflow="auto"
             height={"100vh"}
-            style={{display: "flex", flexDirection: "row", flexWrap: "wrap"}}
+            style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "space-around",
+            borderTop: "2px solid gainsboro"
+            }}
           >
           <Box
+            className={"gradient-border"}
+            id={"box"}
             pad={{
               top: "small",
               horizontal: "small",
@@ -44,38 +53,48 @@ const Content = () => {
             }}
             style={{border: "1.5px solid black"}}
             height={"medium"}
-            width={"50%"}
-            basis={"1/2"}
-            margin={"small"}
-            elevation={"large"}
+            width={"63%"}
+            // basis={"2/4"}
+            margin={"xsmall"}
+            elevation={"xlarge"}
             gap="small"
             overflow="auto"
             animation={"fadeIn"}
             background={undefined}
           >
-            <Box border={"dark-5"} height={"small"} overflow={"auto"} margin={"small"} alignContent={"center"}>
-              <Heading>I like this</Heading>
-            <Text color="black" size="small" margin={"small"}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore
+            <Box animation={"slideLeft"} elevation={"medium"}
+            style={{border: "2px solid white"}} height={"xlarge"} overflow={"auto"} margin={"small"} alignContent={"center"}>
+              <Heading margin={"xsmall"} level={"3"}>Mission Statement</Heading>
+            <Text color="black" size="small" margin={"xsmall"} pad={"xsmall"} >
+              My journey into programming took the scenic route. When I was young,
+              I was the "go-to" guy for immediate family when it came to electronic/computer issues,
+              so that allowed me to develop a bit of comfortability with technical things,
+              but I was always intimidated by programming, so I never really delved into it.
+              However, a year or two ago, I was working an overnight job as a security guard, and one day, I just got tired of working a dead-end, repetitive job,
+              and set out to teach myself programming, and after a little under a year, I stumbled onto Lambda,
+              and realized there was an opportunity to really immerse myself in programming,
+              and come out on the other side with a fully fleshed out skill-set, and decided to take the leap of faith.
             </Text>
             </Box>
-            <Box border={"dark-2"} size="medium" basis={"medium"} alignContent={"center"} margin={"small"}>
-              <Text  color="dark-4"  size={"small"}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
+            <Box animation={"slideRight"} style={{border: "2px solid black"}} size="medium" basis={"medium"} alignContent={"center"} margin={"small"}>
+              <Text  color="light-3"  size={"small"} margin={"small"}>
+              With this knowledge, I hope to help strengthen the bridge and bond,
+              between the arts and technology, as they are more intertwined than I
+              believe we realize or appreciate, as a species and society.
               </Text>
             </Box>
           </Box>
           <Box
+            className={"gradient-border"}
+            id={"box"}
             pad={{
               top: "small",
               horizontal: "small",
               bottom: "small"
             }}
             height={"medium"}
-            margin={"small"}
-            width={"45%"}
+            margin={"xsmall"}
+            width={"34%"}
             // basis={"1/3"}
             elevation={"large"}
             gap="small"
@@ -84,23 +103,36 @@ const Content = () => {
             animation={"fadeIn"}
             style={{border: "1.5px solid black"}}
           >
-            <Box border={"dark-5"} height={"small"} overflow={"auto"}>
-              <h3>I like this</h3>
+            <Box margin={"xsmall"} pad={"xsmall"}
+            border={"dark-5"} height={"large"} overflow={"auto"} animation={"slideRight"} width={"medium"}>
+              <Heading margin={"xsmall"} level={"3"}>Skill Stack</Heading>
               <Text color="black" size="small">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-              </Text>
-            </Box>
-            <Box border={"dark-2"} overflow={"auto"}>
-              <Text  color="dark-4" size="small">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-              </Text>
-            </Box>
-            <Box border={"dark-2"} overflow={"auto"}>
-              <Text color="dark-4" size="small">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
+              <ul>
+                <li>
+                  Javascript
+                  <ul>
+                    <li>
+                      React
+                    </li>
+                    <li>
+                      Node/Express
+                    </li>
+                    <ul>
+                    </ul>
+                  </ul>
+                </li>
+                <li>
+                CSS
+                <ul>
+                <li>
+                SCSS
+                </li>
+                <li>
+                LESS
+                </li>
+                </ul>
+                </li>
+              </ul>
               </Text>
             </Box>
             <Box>
@@ -115,8 +147,10 @@ const Content = () => {
               horizontal: "small",
               bottom: "small"
             }}
-            height={"small"}
-            margin={"small"}
+            className={"gradient-border"}
+            id={"box"}
+            height={"30%"}
+            margin={"xsmall"}
             // width={"medium"}
             basis={"full"}
             elevation={"large"}
@@ -124,34 +158,16 @@ const Content = () => {
             overflow="auto"
             animation={"fadeIn"}
             background={undefined}
-            style={{border: "1.5px solid yellow"}}
+            style={{border: "1.5px solid black", marginBottom: "35px"}}
           >
-            <Box border={"dark-5"} height={"medium"}>
-              <h3>I like this</h3>
-              <Text color="black" size="small">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-              </Text>
-            </Box>
-            <Box border={"dark-2"} overflow={"auto"}>
-              <Text  color="dark-4" size="small">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-              </Text>
-            </Box>
-            <Box border={"dark-2"} overflow={"auto"}>
-              <Text color="dark-4" size="small">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-              </Text>
-            </Box>
-            <Box>
-              <Text color="dark-4" size="small">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-              </Text>
+              <Heading level={4} truncate={true}>Hobbies, Interests, Curio's</Heading>
+            <Box animation={"slideRight"} alignContent={"center"}
+                 style={{display: "flex", flexDirection: "row",}}
+            >
+
             </Box>
           </Box>
+
           </Box>
         </Tab>
         <Tab
@@ -168,10 +184,6 @@ const Content = () => {
               borderBottomWidth: "2px",
               borderRadius: "0 0 0 5%",
               }}>
-
-            <Box gridArea="header" background="light-5" elevation={"medium"}/>
-            <Box gridArea="nav" background="light-5" />
-            <Box gridArea="main" background="light-5" />
         </Tab>
         <Tab title={<RichTabTitle label={"Art"} icon={<Brush color={"light-1"} size={"2rem"}/>}/>}
           style={{
