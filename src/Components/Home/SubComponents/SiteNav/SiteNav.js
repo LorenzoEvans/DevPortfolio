@@ -1,13 +1,11 @@
-import React, {Component} from 'react';
-import './NavBar.css'
-import {Box, Tab, Tabs, Heading, InfiniteScroll, Text, Carousel, Image} from "grommet/es6";
+import React from 'react';
+import './SiteNav.css'
+import {Box, Tab, Tabs, Heading, Text} from "grommet";
 import {RichTabTitle} from "../../Styling/ConstantComponents";
-import {Apps, Brush, Home, Notes} from "grommet-icons/es6";
-import { about } from './AboutContent'
-import {Table, TableBody, TableCell, TableHeader, TableRow} from "grommet";
+import { Apps, Brush, Home, Notes } from "grommet-icons"
 
 
-const Content = () => {
+const SiteNav = () => {
   return (
     <Box style={{width: "100%", height: "100vh"}} overflow={"auto"}>
       <Tabs
@@ -201,8 +199,6 @@ const Content = () => {
             width: "10.5rem",
             marginRight: "107px",
             borderLeft: "0px solid white", borderTop: "0px solid white", borderWidth: "2px", borderBottomWidth: "1px" }}>
-
-
         </Tab>
       </Tabs>
     </Box>
@@ -211,4 +207,4 @@ const Content = () => {
 
 
 
-export default Content;
+export default SiteNav;

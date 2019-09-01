@@ -1,20 +1,15 @@
 import React, { Component } from 'react'
 import RichPanel from './SubComponents/RichPanel'
-import Content from "./SubComponents/NavBar/NavBar";
+import SiteNav from "./SubComponents/SiteNav/SiteNav";
 import './Home.css'
-import { theme, richAccordionTheme, loading } from './Styling/ConstantComponents'
+import { richAccordionTheme, loading } from './Styling/ConstantComponents'
 import {
-Grommet,
   Box,
-  Button,
   Accordion,
   Anchor,
   Heading,
-  Grid,
-  Tabs,
   Text,
   ThemeContext,
-  Tab,
   Clock
 } from 'grommet'
 
@@ -25,10 +20,6 @@ import {
   Linkedin,
   ContactInfo,
   Bookmark,
-  Home,
-  Brush,
-  Notes,
-  Music
 } from 'grommet-icons'
 
 class SideBar extends Component {
@@ -177,7 +168,7 @@ class SideBar extends Component {
               </Box>
             </Box>
           </Box>
-          <Content/>
+          <SiteNav/>
         </Box>
       </div>
     );

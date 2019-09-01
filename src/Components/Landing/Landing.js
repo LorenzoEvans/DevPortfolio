@@ -1,23 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import "./Landing.css"
 import { NavLink } from 'react-router-dom'
-import HomePage from '../Home/Home'
-
-
-const routes = {
-"/home": () => <HomePage />
-}
-
-const NoPageFound = () => {
-  return(
-    <div>
-    Sorry!
-    </div>
-  )
-}
-
-
-
 function Landing()  {
 
     return (
