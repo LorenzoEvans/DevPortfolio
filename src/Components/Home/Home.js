@@ -47,7 +47,7 @@ class SideBar extends Component {
           style={{display: "flex", flexDirection: "row", height: "100vh",}} >
           <Box
             className={"sidebar"}
-            style={{height: "100%", borderImage: "black", border: "2px solid gainsboro", borderBottom: "none"}}
+            style={{height: "100%", borderImage: "black", border: "2px solid gainsboro"}}
             width={"350px"}
             overflow={"auto"}>
 

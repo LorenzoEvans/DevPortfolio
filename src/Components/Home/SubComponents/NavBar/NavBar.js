@@ -1,9 +1,33 @@
 import React, {Component} from 'react';
 import './NavBar.css'
-import {Box, Tab, Tabs, Grid, Distribution, Text} from "grommet/es6";
+import {Box, Tab, Tabs, Grid, Distribution, Paragraph, InfiniteScroll, Text} from "grommet/es6";
 import {RichTabTitle} from "../../Styling/ConstantComponents";
 import {Apps, Brush, Home, Notes} from "grommet-icons/es6";
 import { about } from './AboutContent'
+
+const artArr = ['hi', 'how are you', 'welcome'];
+
+const allItems = Array(2000)
+  .fill(1)
+  .map((_, i) => `item ${i + 1}`);
+
+const SimpleInfiniteScroll = props => (
+  <Box height="90vh" overflow="auto" width={"50%"}>
+    <InfiniteScroll items={allItems} {...props}>
+      {item => (
+        <Box
+          key={item}
+          pad="medium"
+          border={{ side: "bottom" }}
+          align="center"
+        >
+          <Text>{item}</Text>
+        </Box>
+      )}
+    </InfiniteScroll>
+  </Box>
+);
+
 const Content = () => {
   return (
     <div style={{width: "100%", height: "100%"}}>
@@ -27,38 +51,119 @@ const Content = () => {
               borderRadius: "0% 5% 0% 0%",
               borderWidth: "2px",
               borderTopWidth: "2px",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "row-wrap",
+              justifyContent: "space-evenly"
             }}>
             <Box
-              gridArea="header"
-              background="none"
-              style={{borderTop: "2px solid gainsboro", borderBottom: "2px solid gainsboro", height: "20%"}}
-            >
-              Status
-              Status
-              Status
-              Status
-              Status
-              Status
-              Status
-              Status
-              Status
-              Status
-              Status
-            </Box>
-            <Box
-              basis={"large"}
-              background="none"
-              style={{borderBottom: "2px solid gainsboro"}}
+            style={{
+            height: "50%", border: "1.75px solid black", width: "50%",
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "row-wrap",
+            justifyContent: "space-evenly"
+            }}
+            elevation={"small"}
+            animation={"zoomIn"}
+             >
+              <Box animation={"fadeIn"}
+              margin={"small"}
+              pad={"small"}
+              width={"33%"}
+              overflow="scroll"
+                style={{border: "2px solid gainsboro"}}
               >
-            Dependencies
-            </Box>
-            <Box
-              background="none"
-              style={{borderBottom: "2px solid gainsboro", height: "20%"}}
+                <h2>
+                I like this!
+                </h2>
+                <Text margin="small" width={"33%"}>
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
+
+                </Text>
+              </Box>
+              <Box animation={"fadeIn"}
+                   pad={"small"}
+                   width={"67%"}
+                   margin={"small"}
+                   style={{border: "2px solid gainsboro"}}
               >
 
-            Additional
+                <h2>
+                I'd love to work on these!
+                </h2>
+                <Text margin="small">
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
+                </Text>
+              </Box>
+
             </Box>
+          <Box
+            pad={{
+              top: "medium",
+              horizontal: "medium",
+              bottom: "medium"
+            }}
+            gap="small"
+            overflow="auto"
+            height={"50px"}
+          >
+
+            <Text  color="light-3" size="small">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore
+            </Text>
+            <Text color="light-3" size="small">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore
+            </Text>
+            <Text color="light-3" size="small">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore
+            </Text>
+            <Text color="light-3" size="small">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore
+            </Text>
+            <Text color="light-3" size="small">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore
+            </Text>
+          </Box>
         </Tab>
         <Tab
         title={
@@ -86,7 +191,7 @@ const Content = () => {
             marginBottom: "2.5px",
             width: "10.5rem",
             borderRight: "0px solid white", borderTop: "0px solid white", borderWidth: "2px", borderBottomWidth: "1px"}}>
-          <Box pad="small" style={{height: "90.80vh"}}>Two</Box>
+          <SimpleInfiniteScroll/>
         </Tab>
         <Tab title={<RichTabTitle label={"Writing"} icon={<Notes color={"light-1"} size={"2rem"}/>}/>}
           style={{
