@@ -22,7 +22,7 @@ function Landing()  {
 
     return (
      <div className="background">
-       <span className={"title"} > La Maison De #0xLE
+       <span className={"title"} > Lorenzo Evans
        <span className={"title3"} >CodeArtLogicBeauty</span>
 
        </span>

@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import './NavBar.css'
 import {Box, Tab, Tabs, Heading, InfiniteScroll, Text} from "grommet/es6";
 import {RichTabTitle} from "../../Styling/ConstantComponents";
+import {Apps, Brush, Home, Notes} from "grommet-icons/es6";
+import { about } from './AboutContent'
 
 
 const Content = () => {
@@ -40,7 +42,7 @@ const Content = () => {
               horizontal: "small",
               bottom: "small"
             }}
-            style={{border: "1.5px solid green"}}
+            style={{border: "1.5px solid black"}}
             height={"medium"}
             width={"50%"}
             basis={"1/2"}
@@ -58,59 +60,11 @@ const Content = () => {
               sed do eiusmod tempor incididunt ut labore et dolore
             </Text>
             </Box>
-            <Box border={"dark-2"} overflow={"auto"}>
-              <Text  color="dark-4" size="small">
+            <Box border={"dark-2"} size="medium" basis={"medium"} alignContent={"center"} margin={"small"}>
+              <Text  color="dark-4"  size={"small"}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore
               </Text>
-            </Box>
-            <Box border={"dark-2"} overflow={"auto"}>
-              <Text  color="dark-4" size="small">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-              </Text>
-            </Box>
-            <Box border={"dark-2"} overflow={"auto"}>
-              <Text  color="dark-4" size="small">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-              </Text>
-            </Box>
-            <Box border={"dark-2"} overflow={"auto"}>
-              <Text  color="dark-4" size="small">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-              </Text>
-            </Box>
-            <Box border={"dark-2"} overflow={"auto"}>
-              <Text  color="dark-4" size="small">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-              </Text>
-            </Box>
-            <Box border={"dark-2"} overflow={"auto"}>
-              <Text  color="dark-4" size="small">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-              </Text>
-            </Box>
-            <Box border={"dark-2"} overflow={"auto"}>
-              <Text  color="dark-4" size="small">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-              </Text>
-            </Box>
-            <Box border={"dark-2"} overflow={"auto"}>
-            <Text color="dark-4" size="small">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore
-            </Text>
-            </Box>
-            <Box>
-            <Text color="dark-4" size="small">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore
-            </Text>
             </Box>
           </Box>
           <Box
@@ -121,8 +75,8 @@ const Content = () => {
             }}
             height={"medium"}
             margin={"small"}
-            // width={"31%"}
-            basis={"1/3"}
+            width={"45%"}
+            // basis={"1/3"}
             elevation={"large"}
             gap="small"
             overflow="auto"
@@ -164,7 +118,7 @@ const Content = () => {
             height={"small"}
             margin={"small"}
             // width={"medium"}
-            basis={"3/4"}
+            basis={"full"}
             elevation={"large"}
             gap="small"
             overflow="auto"
@@ -172,7 +126,7 @@ const Content = () => {
             background={undefined}
             style={{border: "1.5px solid yellow"}}
           >
-            <Box border={"dark-5"} height={"small"} overflow={"auto"}>
+            <Box border={"dark-5"} height={"medium"}>
               <h3>I like this</h3>
               <Text color="black" size="small">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -226,7 +180,6 @@ const Content = () => {
             marginBottom: "2.5px",
             width: "10.5rem",
             borderRight: "0px solid white", borderTop: "0px solid white", borderWidth: "2px", borderBottomWidth: "1px"}}>
-          <SimpleInfiniteScroll/>
         </Tab>
         <Tab title={<RichTabTitle label={"Writing"} icon={<Notes color={"light-1"} size={"2rem"}/>}/>}
           style={{
