@@ -1,6 +1,5 @@
 import React from 'react';
 import {Box, Heading, Text} from "grommet/es6";
-
 const HomeContent = () => {
   return (
     <>
@@ -75,6 +74,7 @@ const HomeContent = () => {
           animation={"fadeIn"}
           style={{border: "1.5px solid black"}}
         >
+
           <Box margin={"xsmall"} pad={"xsmall"}
                border={"dark-5"} height={"large"} overflow={"auto"} animation={"slideRight"} width={"medium"}>
             <Heading margin={"xsmall"} level={"3"}>Skill Stack</Heading>
@@ -113,7 +113,8 @@ const HomeContent = () => {
               sed do eiusmod tempor incididunt ut labore et dolore
             </Text>
           </Box>
-        </Box><Box
+        </Box>
+        <Box
         pad={{
           top: "small",
           horizontal: "small",
