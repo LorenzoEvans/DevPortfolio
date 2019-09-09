@@ -12,57 +12,39 @@ const SiteNav = () => {
         className={"nav-tabs"}
         >
         <Tab
+          className={"single-tab"}
           title={<RichTabTitle
+          className={"icon-style"}
           label={"Home"} icon={<Home
           color={"light-1"}
           overflow={"auto"}
           bottom={"white"}
-          size={"2rem"}/>}
+          size={"medium"}/>}
           />}
           style={
             {
-              marginTop: "10px",
-              marginBottom: "2.5px",
-              width: "10.5rem",
-              borderRight: "2px solid white",
-              borderTop: "2px solid white",
-              borderRadius: "0% 5% 0% 0%",
-              borderWidth: "2px",
-              borderTopWidth: "2px",
+            fontFamily: 'Megrim'
             }}>
           <HomeContent/>
         </Tab>
         <Tab
+          className={"single-tab"}
         title={
-          <RichTabTitle icon={
-              <Apps color={"light-1"} size={"2rem"}/>} label={"Apps"}/>}
-              style={{
-              marginTop: "10px",
-              marginBottom: "2.5px",
-              width: "10.5rem",
-              borderBottom: "0px solid white",
-              borderLeft: "0px solid white",
-              borderWidth: "2px",
-              borderBottomWidth: "2px",
-              borderRadius: "0 0 0 5%",
-              }}>
+          <RichTabTitle className={"icon-style"} icon={<Apps color={"light-1"} size={"medium"}/>}
+              label={"Apps"}/>}
+              style={{borderRadius: "0 0 0 5%", fontFamily: 'Megrim'}}>
         </Tab>
-        <Tab title={<RichTabTitle label={"Art"} icon={<Brush color={"light-1"} size={"2rem"}/>}/>}
-          style={{
-            borderRadius: "0 5% 0 0",
-            marginTop: "10px",
-            marginBottom: "2.5px",
-            width: "10.5rem",
-            borderRight: "0px solid white", borderTop: "0px solid white", borderWidth: "2px", borderBottomWidth: "1px"}}>
+        <Tab className={"single-tab"}
+          title={<RichTabTitle
+          className={"icon-style"}
+          label={"Art"} icon={<Brush color={"light-1"} size={"medium"}/>}/>}
+          style={{ borderRadius: "0 5% 0 0", fontFamily: 'Megrim'}}>
         </Tab>
-        <Tab title={<RichTabTitle label={"Writing"} icon={<Notes color={"light-1"} size={"2rem"}/>}/>}
-          style={{
-            borderRadius: "5% 0 0 0",
-            marginTop: "10px",
-            marginBottom: "2.5px",
-            width: "10.5rem",
-            marginRight: "107px",
-            borderLeft: "0px solid white", borderTop: "0px solid white", borderWidth: "2px", borderBottomWidth: "1px" }}>
+        <Tab
+          title={<RichTabTitle
+          className={"icon-style"}
+          label={"Writing"} icon={<Notes color={"light-1"} size={"medium"}/>}/>}
+          style={{borderRadius: "5% 0 0 0", fontFamily: 'Megrim'}}>
         </Tab>
       </Tabs>
     </Box>

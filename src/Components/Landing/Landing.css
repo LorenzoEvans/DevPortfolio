@@ -1,14 +1,17 @@
 .background {
  background: repeating-linear-gradient(330deg, #6F7983,  #0c1f36, #4d4d4d, #0d0a18, #707479,  #637181, rgb(51, 40, 68), #74b5be, #76638a);
- background-size: 1800% 1800%;
+ background-size: 1300% 1300%;
  animation: backgroundgradient 20s ease-in-out infinite;
  z-index: 0;
- width: 100% ;
+ width: 100vw ;
  height: 100vh;
+ /*border: 2px solid red;*/
  display: flex ;
  text-align: center;
  flex-direction: column;
  justify-content: space-evenly;
+ align-items: center;
+
 }
 
 @keyframes backgroundgradient {
@@ -29,7 +32,7 @@
 .title {
  opacity: 1;
  color: #63314c;
- font-size: 130%;
+ font-size: 120%;
  font-weight: 700;
  display: flex;
  flex-direction: column;
@@ -45,7 +48,7 @@
  display: flex;
  justify-content: center;
  font-weight: 700;
- margin-bottom: 0.5rem;
+ margin-bottom: 1.5rem;
  letter-spacing: 1.5px ;
  font-family: 'Bungee Shade';
  text-shadow: 0px 34px #74b5be;
@@ -53,16 +56,16 @@
 
 .enter-button {
  opacity: 0.4;
-font-size: 3rem;
+font-size: 1.7rem;
  font-family: 'Bungee Shade';
  color: #231e2c;
- height: 4.5rem;
- width: 100%;
+ height: 3rem;
+ width: 100vw;
  border: 1px outset gainsboro ;
  border-left: none;
  border-right: none;
- padding-top: 1.75%;
- padding-bottom: -0.5%;
+ padding-top: 0.90%;
+ padding-bottom: -1.5%;
 text-decoration: none;
 text-shadow: -125px 0px 0px rgba(155, 146, 192, 0.84), 125px 0px rgba(97, 218, 251, 0.66);
  background: repeating-linear-gradient(200deg, rgba(81, 38, 207, 0.39), rgba(35, 221, 201, 0.5), rgba(176, 105, 73, 0.39), rgba(13, 10, 24, 0.22), #707479,  #637181, rgb(51, 40, 68), #74b5be, #76638a);
@@ -80,8 +83,8 @@ text-shadow: -125px 0px 0px rgba(155, 146, 192, 0.84), 125px 0px rgba(97, 218, 2
  font-size: 90%;
  display: inline-block;
  font-weight: 700;
- margin-top: 4.25rem;
+ margin-top: 2.75rem;
  letter-spacing: 10px ;
  font-family: 'Bungee Shade';
- text-shadow: 0px -99px rgba(99, 190, 172, 0.57);
+ text-shadow: 0px -97px rgba(99, 190, 172, 0.57);
 }

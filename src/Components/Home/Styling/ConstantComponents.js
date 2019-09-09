@@ -15,7 +15,7 @@ const theme = {
     }
   },
   tabs: {
-    borderBottomWidth: "medium",
+    borderBottom: undefined,
     border: undefined,
     gap: "110px",
     justify: "start",
@@ -33,21 +33,13 @@ const theme = {
     active:{
       color: "light-4",
     },
-    border: {
-    color: "dark-1",
-    active: {
-        color: "#d6b3e4"
-      },
-    radius: "5px 5px 5px 5px"
-    },
-    pad: {
-      bottom: "light-2",
-      horizontal: "small",
-      borderBottomStyle: {
-      width: "20px"
-      },
-      border: undefined
-    },
+    border: undefined,
+    // pad: {
+    //   bottom: "light-2",
+    //   horizontal: "small",
+    //   borderBottomStyle: undefined,
+    //   border: undefined
+    // },
     hover: {
       border: "light-2",
       color: "#BEA49F"
