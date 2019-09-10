@@ -19,20 +19,18 @@ const SiteNav = () => {
           color={"light-1"}
           overflow={"auto"}
           bottom={"white"}
-          size={"medium"}/>}
+            />}
           />}
-          style={
-            {
-            fontFamily: 'Megrim'
-            }}>
+          style={{fontFamily: 'Megrim'}}>
           <HomeContent/>
         </Tab>
         <Tab
           className={"single-tab"}
         title={
           <RichTabTitle className={"icon-style"} icon={<Apps color={"light-1"} size={"medium"}/>}
-              label={"Apps"}/>}
-              style={{borderRadius: "0 0 0 5%", fontFamily: 'Megrim'}}>
+              label={"Apps"} style={{fontSize: '1.9rem'}}/>
+              }
+              style={{borderRadius: "0 0 0 5%", fontFamily: 'Megrim', fontSize: '1.9rem'}}>
         </Tab>
         <Tab className={"single-tab"}
           title={<RichTabTitle
@@ -43,8 +41,8 @@ const SiteNav = () => {
         <Tab
           title={<RichTabTitle
           className={"icon-style"}
-          label={"Writing"} icon={<Notes color={"light-1"} size={"medium"}/>}/>}
-          style={{borderRadius: "5% 0 0 0", fontFamily: 'Megrim'}}>
+          label={"Writing"} icon={<Notes color={"light-1"} size={"medium"} style={{fontSize: '30px'}}/>}/>}
+          style={{borderRadius: "5% 0 0 0", fontFamily: 'Megrim', fontSize: '30px'}}>
         </Tab>
       </Tabs>
     </Box>

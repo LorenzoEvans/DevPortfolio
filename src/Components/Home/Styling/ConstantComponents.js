@@ -1,56 +1,66 @@
 import {FormAdd, FormSubtract} from "grommet-icons/es6";
 import React from "react";
 import {Box, Text} from "grommet/es6";
+import { deepMerge } from 'grommet/utils'
+import { grommet } from 'grommet/themes'
+import { css } from "styled-components";
 
-const theme = {
+const theme = deepMerge(grommet, {
   global: {
     edgeSize: {
-      small: "8px"
+      small: "10px"
     },
     elevation: {
       light: {
-        small: "0px 1px 5px rgba(12, 67, 170, 0.50)",
-        medium: "0px 3px 8px rgba(32, 34, 112, 0.50)"
+        small: "0px 1px 5px rgba(0, 0, 0, 0.50)",
+        medium: "0px 3px 8px rgba(0, 0, 0, 0.50)"
       }
     }
   },
-  tabs: {
-    borderBottom: undefined,
-    border: undefined,
-    gap: "110px",
-    justify: "start",
-    width: "100%",
-    elevation: "10px",
-    paddingTop: "5px"
-  },
-  anchor: {
-    textDecoration: "none",
-    hover: {
-      textDecoration: "none"
-    }
-  },
   tab: {
-    active:{
-      color: "light-4",
+    active: {
+      background: "dark-1",
+      color: "accent-1"
     },
+    background: "dark-3",
     border: undefined,
-    // pad: {
-    //   bottom: "light-2",
-    //   horizontal: "small",
-    //   borderBottomStyle: undefined,
-    //   border: undefined
-    // },
+    color: "white",
     hover: {
-      border: "light-2",
-      color: "#BEA49F"
+      background: "dark-1"
+    },
+    margin: undefined,
+    pad: {
+      bottom: undefined,
+      horizontal: "small"
+    },
+    extend: ({ theme }) => css`
+      border-radius: ${theme.global.control.border.radius};
+      box-shadow: ${theme.global.elevation.light.small};
+    `
+  },
+  tabs: {
+    background: "dark-3",
+    gap: "medium",
+    header: {
+      background: "dark-2",
+      extend: ({ theme }) => css`
+        padding: ${theme.global.edgeSize.small};
+        box-shadow: ${theme.global.elevation.light.medium};
+      `
+    },
+    panel: {
+      extend: ({ theme }) => css`
+        padding: ${theme.global.edgeSize.large};
+        box-shadow: ${theme.global.elevation.light.medium};
+      `
     }
   }
-};
+})
 
 const RichTabTitle = ({ icon, label }) => (
   <Box direction="row" align="center" gap="small" margin="small">
     {icon}
-    <Text size="xsmall">
+    <Text size="medium">
       <strong>{label}</strong>
     </Text>
   </Box>
@@ -71,8 +81,6 @@ const richAccordionTheme = {
       expand: AddForm
     },
     border: {
-    color: "none",
-    side: "none"
     }
   }
 };

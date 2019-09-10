@@ -6,7 +6,6 @@ import HomePage from './Components/Home/Home'
 import {Grommet} from 'grommet'
 import {theme} from './Components/Home/Styling/ConstantComponents'
 
-
 class App extends React.Component {
  render () {
   return (
