@@ -15,8 +15,9 @@ class Sidebar extends Component {
       <>
         <Box
           className={"sidebar"}
-          style={{height: "100%", borderImage: "black", border: "2px solid gainsboro"}}
+          style={{height: "100%", borderImage: "black"}}
           width={"350px"}
+          elevation={"small"}
           overflow={"auto"}>
 
           <Box fill direction="row" color={"light-2"} style={{height: "100vh"}}>

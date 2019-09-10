@@ -20,13 +20,13 @@ const theme = deepMerge(grommet, {
   tab: {
     active: {
       background: "dark-1",
-      color: "accent-1"
+      color: "#aca19c"
     },
     background: "dark-3",
     border: undefined,
     color: "white",
     hover: {
-      background: "dark-1"
+      background: "#aca19c"
     },
     margin: undefined,
     pad: {
@@ -39,21 +39,13 @@ const theme = deepMerge(grommet, {
     `
   },
   tabs: {
-    background: "dark-3",
     gap: "medium",
     header: {
-      background: "dark-2",
       extend: ({ theme }) => css`
         padding: ${theme.global.edgeSize.small};
         box-shadow: ${theme.global.elevation.light.medium};
       `
     },
-    panel: {
-      extend: ({ theme }) => css`
-        padding: ${theme.global.edgeSize.large};
-        box-shadow: ${theme.global.elevation.light.medium};
-      `
-    }
   }
 })
 
@@ -80,8 +72,7 @@ const richAccordionTheme = {
       collapse: SubtractForm,
       expand: AddForm
     },
-    border: {
-    }
+    textDecoration: "none",
   }
 };
 

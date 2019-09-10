@@ -11,7 +11,6 @@ const HomeContent = () => {
           flexDirection: "row",
           flexWrap: "wrap",
           justifyContent: "space-around",
-          borderTop: "2px solid gainsboro"
         }}
       >
         <Box
@@ -22,7 +21,7 @@ const HomeContent = () => {
             horizontal: "small",
             bottom: "small"
           }}
-          style={{border: "1.5px solid black"}}
+          style={{border: "1.5px solid black", borderRadius: "10px 0px 0px 0px"}}
           height={"medium"}
           width={"63%"}
           // basis={"2/4"}
@@ -37,14 +36,13 @@ const HomeContent = () => {
                style={{border: "2px solid white"}} height={"xlarge"} overflow={"auto"} margin={"small"} alignContent={"center"}>
             <Heading margin={"xsmall"} level={"3"}>Mission Statement</Heading>
             <Text color="black" size="small" margin={"xsmall"} pad={"xsmall"} >
-              My journey into programming took the scenic route. When I was young,
-              I was the "go-to" guy for immediate family when it came to electronic/computer issues,
-              so that allowed me to develop a bit of comfortability with technical things,
-              but I was always intimidated by programming, so I never really delved into it.
-              However, a year or two ago, I was working an overnight job as a security guard, and one day, I just got tired of working a dead-end, repetitive job,
-              and set out to teach myself programming, and after a little under a year, I stumbled onto Lambda,
-              and realized there was an opportunity to really immerse myself in programming,
-              and come out on the other side with a fully fleshed out skill-set, and decided to take the leap of faith.
+              My journey into programming took the scenic route. I've spent a lot of time dabbling in
+              the technical. I became a power user of computers and software, through in audio engineering,
+              but never delved so far in that I ended up programming. Roughly two years ago, I decided to try and
+              wring the most out of my technical inclinations, began studying networking engineering, security, and they all pointed
+              to a need to understand programs. So I decided to do just that.
+              Fast forward to now, and I'm a well rounded Full Stack Developer, via Lambda School.
+              Programming never let me go.
             </Text>
           </Box>
           <Box animation={"slideRight"} style={{border: "2px solid black"}} size="medium" basis={"medium"} alignContent={"center"} margin={"small"}>
@@ -72,7 +70,7 @@ const HomeContent = () => {
           overflow="auto"
           background={undefined}
           animation={"fadeIn"}
-          style={{border: "1.5px solid black"}}
+          style={{border: "1.5px solid black", borderRadius: "0px 10px 0px 0px"}}
         >
 
           <Box margin={"xsmall"} pad={"xsmall"}
@@ -131,7 +129,7 @@ const HomeContent = () => {
         overflow="auto"
         animation={"fadeIn"}
         background={undefined}
-        style={{border: "1.5px solid black", marginBottom: "35px"}}
+        style={{border: "1.5px solid black", marginBottom: "95px", borderRadius: "0px 0px 10px 10px"}}
       >
         <Heading level={4} truncate={true}>Hobbies, Interests, Curio's</Heading>
         <Box animation={"slideRight"} alignContent={"center"}
