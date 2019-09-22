@@ -102,6 +102,31 @@ const HomeContent = () => {
                     </li>
                   </ul>
                 </li>
+                <li>
+                  SQL
+                </li>
+                <li>Testing</li>
+                <li>Version Control</li>
+                <li>Agile</li>
+                <li>Deployment
+                <ul>
+                  <li>CI</li>
+                </ul>
+                </li>
+                <li>GraphQL</li>
+                <li>Functional Programming
+                  <ul>
+                  <li>Haskell</li>
+                  <li>
+                    Lisp Family Languages
+                    <ul>
+                    <li>Clojure</li>
+                    <li>Common Lisp</li>
+                    </ul>
+                  </li>
+                  </ul>
+                </li>
+
               </ul>
             </Text>
           </Box>
