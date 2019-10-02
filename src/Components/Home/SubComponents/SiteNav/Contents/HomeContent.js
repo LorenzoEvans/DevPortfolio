@@ -156,7 +156,7 @@ const HomeContent = () => {
         background={undefined}
         style={{border: "1.5px solid black", marginBottom: "95px", borderRadius: "0px 0px 10px 10px"}}
       >
-        <Heading level={4} truncate={true}>Hobbies, Interests, Curio's</Heading>
+        <Heading className={"hover-washed-blue"} level={4} truncate={true}>Hobbies, Interests, Curio's</Heading>
         <Box animation={"slideRight"} alignContent={"center"}
              style={{display: "flex", flexDirection: "row",}}
         >
