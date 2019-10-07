@@ -110,7 +110,8 @@ const HomeContent = () => {
                 <li>Agile</li>
                 <li>Deployment
                 <ul>
-                  <li>CI</li>
+                  <li>Heroku</li>
+                  <li>CD Via Github</li>
                 </ul>
                 </li>
                 <li>GraphQL</li>
