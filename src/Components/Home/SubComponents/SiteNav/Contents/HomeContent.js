@@ -116,12 +116,11 @@ const HomeContent = () => {
                 <li>GraphQL</li>
                 <li>Functional Programming
                   <ul>
-                  <li>Haskell</li>
+                  <li>Elm</li>
                   <li>
                     Lisp Family Languages
                     <ul>
-                    <li>Clojure</li>
-                    <li>Common Lisp</li>
+                    <li>Clojure/Script</li>
                     </ul>
                   </li>
                   </ul>
