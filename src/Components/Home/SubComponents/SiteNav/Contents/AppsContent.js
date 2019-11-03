@@ -6,7 +6,7 @@ class AppsContent extends Component {
   render() {
     return (
       <div>
-        <article className="mw6 center bg-near-white br3 pa2 mv2 ba b--light-gray bw2 bg-animate grow animate hover-bg-near-black hover-washed-blue" >
+        <article className="mw6 center bg-near-white br3 pa2 mv3 ba b--moon-gray bw2 bg-animate grow animate hover-bg-near-black hover-washed-blue" >
           <h1 className="f4 hover-washed-green tc">Aunalytix</h1>
           <p className="lh-copy pa3 center f6 hover-washed-blue ">
             ******add image******
@@ -17,7 +17,7 @@ class AppsContent extends Component {
             and their supporters, via the user-centric data handling principles this application will enforce.
           </p>
         </article>
-        <article className="mw6 center bg-near-white br3 pa2 mv2 ba b--light-gray bw2 bg-animate grow animate hover-bg-near-black hover-washed-blue" >
+        <article className="mw6 center bg-near-white br3 pa2 mv3 ba b--moon-gray bw2 bg-animate grow animate hover-bg-near-black hover-washed-blue" >
           <h1 className="f4 hover-washed-green tc">Immutable Gallery</h1>
           <p className="lh-copy pa3 center f6 hover-washed-blue">
           ******add image******  
@@ -25,7 +25,7 @@ class AppsContent extends Component {
           in an attempt to explore the relationship between technology and art.
           </p>
         </article>
-        <article className="mw6 center bg-near-white br3 pa2 mv2 ba b--light-gray bw2 bg-animate grow animate hover-bg-near-black hover-washed-blue" >
+        <article className="mw6 center bg-near-white br3 pa2 mv3 ba b--moon-gray bw2 bg-animate grow animate hover-bg-near-black hover-washed-blue" >
           <h1 className="f4 hover-washed-green tc"> Maybe Black Sheep</h1>
           <p className="lh-copy pa3 center f6 hover-washed-blue">
           ******add image******

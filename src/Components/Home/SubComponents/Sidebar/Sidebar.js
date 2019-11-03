@@ -84,46 +84,7 @@ class Sidebar extends Component {
 
                     </Box>
                   </RichPanel>
-                  <RichPanel
-                    icon={<Bookmark color="#E2B3A9" />}
-                    label="Highlights"
-                  >
-                    {highlightLoaded ? (
-                      <Box
-                        pad={{
-                          top: "medium",
-                          horizontal: "medium",
-                          bottom: "medium"
-                        }}
-                        gap="small"
-                        overflow="auto"
-                      >
-
-                        <Text  color="light-3" size="small">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                          sed do eiusmod tempor incididunt ut labore et dolore
-                        </Text>
-                        <Text color="light-3" size="small">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                          sed do eiusmod tempor incididunt ut labore et dolore
-                        </Text>
-                        <Text color="light-3" size="small">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                          sed do eiusmod tempor incididunt ut labore et dolore
-                        </Text>
-                        <Text color="light-3" size="small">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                          sed do eiusmod tempor incididunt ut labore et dolore
-                        </Text>
-                        <Text color="light-3" size="small">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                          sed do eiusmod tempor incididunt ut labore et dolore
-                        </Text>
-                      </Box>
-                    ) : (
-                      loading
-                    )}
-                  </RichPanel>
+                  
                   <RichPanel
                     icon={<ContactInfo color="#E2B3A9" />}
                     label="Contact Info"
