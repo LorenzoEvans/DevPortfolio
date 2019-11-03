@@ -25,7 +25,7 @@ class Sidebar extends Component {
               <Box
                 background={"transparent"}
                 as="header"
-                height={"200px"}
+                height={"300px"}
                 pad={{ horizontal: "xsmall" }}
                 style={{
                   display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center",
@@ -37,14 +37,14 @@ class Sidebar extends Component {
                            paddingBottom: "2px",
                            color: "#dfe1dc", textShadow: "-25px -20.5px 0.50px #BEA49F",
                            marginBottom: "30px"}}>
+                             <Clock type={"digital"} size={"medium"} style={{color: "#d5c9c8", fontStyle: "bold"}}/>
                   <strong
                     style={{fontFamily: "Bungee Shade",
                       color: "#cdcdcd", textShadow: "0px 35.5px 4.9px #CDBFC1",
-                      marginBottom: "30px"}}
+                      marginBottom: "30px", marginTop: "5px"}}
 
                   >#0xLE</strong>
                 </Heading>
-                <Clock type={"digital"} size={"medium"} style={{color: "#d5c9c8", fontStyle: "bold"}}/>
               </Box>
               <ThemeContext.Extend value={richAccordionTheme}>
                 <Accordion

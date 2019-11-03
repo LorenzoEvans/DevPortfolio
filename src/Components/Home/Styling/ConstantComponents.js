@@ -28,10 +28,10 @@ const theme = deepMerge(grommet, {
     hover: {
       background: "#aca19c"
     },
-    margin: undefined,
+    margin: "small",
     pad: {
       bottom: undefined,
-      horizontal: "small"
+      horizontal: undefined
     },
     extend: ({ theme }) => css`
       border-radius: ${theme.global.control.border.radius};
@@ -50,7 +50,7 @@ const theme = deepMerge(grommet, {
 })
 
 const RichTabTitle = ({ icon, label }) => (
-  <Box direction="row" align="center" gap="small" margin="small">
+  <Box direction="row" align="center" gap="small" margin="medium">
     {icon}
     <Text size="medium">
       <strong>{label}</strong>

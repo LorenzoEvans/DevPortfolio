@@ -19,10 +19,10 @@ class SideBar extends Component {
   render() {
     return (
       <div className={"gradient-bg"}>
-        <Box elevation="40px"
+        <Box elevation="40px" width="100%"
           style={{display: "flex", flexDirection: "row", height: "100vh",}} >
           <Sidebar/>
-          <SiteNav/>
+          <SiteNav />
         </Box>
       </div>
     );

@@ -6,6 +6,7 @@ const HomeContent = () => {
       <Box
         overflow="auto"
         height={"100vh"}
+        width={"100%"}
         style={{
           display: "flex",
           flexDirection: "row",
@@ -18,7 +19,6 @@ const HomeContent = () => {
           id={"box"}
           pad={{
             top: "small",
-            horizontal: "small",
             bottom: "small"
           }}
           style={{border: "1.5px solid black", borderRadius: "10px 0px 0px 0px"}}

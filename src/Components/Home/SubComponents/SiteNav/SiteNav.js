@@ -2,7 +2,7 @@ import React from 'react';
 import './SiteNav.css'
 import {Box, Tab, Tabs} from "grommet";
 import {RichTabTitle} from "../../Styling/ConstantComponents";
-import { Apps, Brush, Home, Notes } from "grommet-icons"
+import { Apps, Brush, Home} from "grommet-icons"
 import HomeContent from "./Contents/HomeContent";
 import AppsContent from "./Contents/AppsContent";
 
@@ -10,9 +10,7 @@ const SiteNav = () => {
   return (
     <Box animation={"slideIn"} style={{width: "100%", height: "100vh"}} overflow={"auto"}>
       <Tabs
-
-        className={"nav-tabs"}
-        >
+        className={"nav-tabs"}>   
         <Tab
           className={"single-tab"}
           title={<RichTabTitle
@@ -34,18 +32,6 @@ const SiteNav = () => {
               }
               style={{fontFamily: 'Megrim', fontSize: '1.9rem'}}>
           <AppsContent />
-        </Tab>
-        <Tab className={"single-tab"}
-          title={<RichTabTitle
-          className={"icon-style"}
-          label={"Art"} icon={<Brush color={"light-1"} size={"medium"}/>}/>}
-          style={{ fontFamily: 'Megrim'}}>
-        </Tab>
-        <Tab
-          title={<RichTabTitle
-          className={"icon-style"}
-          label={"Writing"} icon={<Notes color={"light-1"} size={"medium"} style={{fontSize: '30px'}}/>}/>}
-          style={{fontFamily: 'Megrim', fontSize: '30px'}}>
         </Tab>
       </Tabs>
     </Box>

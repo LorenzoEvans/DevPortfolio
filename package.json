@@ -4,7 +4,7 @@
   "private": true,
   "engines" : {
   "npm": "6.11.3",
-  "node": "12.10.0"
+  "node": "12.11.1"
   },
   "dependencies": {
     "grommet": "^2.7.7",

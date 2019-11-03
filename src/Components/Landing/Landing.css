@@ -5,7 +5,6 @@
  z-index: 0;
  width: 100vw ;
  height: 100vh;
- /*border: 2px solid red;*/
  display: flex ;
  text-align: center;
  flex-direction: column;
@@ -54,6 +53,19 @@
  text-shadow: 0px 34px #74b5be;
 }
 
+
+.title3 {
+    opacity: 0.8;
+    color: #9e819e;
+    font-size: 90%;
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 2.75rem;
+    letter-spacing: 10px ;
+    font-family: 'Bungee Shade';
+    text-shadow: 0px -97px rgba(99, 190, 172, 0.57);
+}
+
 .enter-button {
  opacity: 0.4;
 font-size: 1.7rem;
@@ -76,15 +88,3 @@ text-shadow: -125px 0px 0px rgba(155, 146, 192, 0.84), 125px 0px rgba(97, 218, 2
 .enter-button:focus {outline:0;}
 
 
-
-.title3 {
- opacity: 0.8;
- color: #9e819e;
- font-size: 90%;
- display: inline-block;
- font-weight: 700;
- margin-top: 2.75rem;
- letter-spacing: 10px ;
- font-family: 'Bungee Shade';
- text-shadow: 0px -97px rgba(99, 190, 172, 0.57);
-}
